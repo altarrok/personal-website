@@ -19,6 +19,7 @@ const Footer = () => {
     color: ${COLORPALETTE.darkWhite};
     text-align: center;
     font-size: 0.8em;
+    width:100%;
   `
 
   return (
