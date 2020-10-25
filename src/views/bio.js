@@ -1,7 +1,7 @@
 import React from "react"
 import Circles from 'react-svg-textures/es/Circles';
 import COLORPALETTE from "../COLORPALETTE.json";
-import BIO from "../BIO.json";
+import BIO from "../contents/BIO.json";
 
 import Container from "../components/container"
 import Card from "../components/card"

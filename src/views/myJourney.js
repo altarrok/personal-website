@@ -1,8 +1,10 @@
 import React from "react"
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
+import MYJOURNEY from "../contents/MYJOURNEY.json";
 
 import Container from "../components/container"
+import Card from "../components/card"
 
 const textureId = "MyJourney";
 const Texture =
@@ -19,7 +21,11 @@ const MyJourney = () => {
 
   return (
     <Container Texture={Texture} textureId={textureId}>
-        MyJourney 
+        <Card 
+          title={MYJOURNEY.title} 
+          subtitle={MYJOURNEY.subtitle}
+          paragrapghes={MYJOURNEY.paragraphes}
+        />
     </Container>
   )
 }

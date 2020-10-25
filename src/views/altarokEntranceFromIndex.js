@@ -1,8 +1,10 @@
 import React from "react"
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
+import ALTAROKENTRANCE from "../contents/ALTAROKENTRANCE.json";
 
 import Container from "../components/container"
+import Card from "../components/card"
 
 const textureId = "AltarokEntrance";
 const Texture =
@@ -19,7 +21,11 @@ const AltarokEntrance = () => {
 
   return (
     <Container Texture={Texture} textureId={textureId}>
-        AltarokEntrance 
+        <Card 
+          title={ALTAROKENTRANCE.title} 
+          subtitle={ALTAROKENTRANCE.subtitle}
+          paragrapghes={ALTAROKENTRANCE.paragraphes}
+        />
     </Container>
   )
 }

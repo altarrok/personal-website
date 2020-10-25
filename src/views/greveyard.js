@@ -1,8 +1,10 @@
 import React from "react"
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
+import GREVEYARD from "../contents/GREVEYARD.json";
 
 import Container from "../components/container"
+import Card from "../components/card"
 
 const textureId = "Greveyard";
 const Texture =
@@ -19,7 +21,11 @@ const Greveyard = () => {
 
   return (
     <Container Texture={Texture} textureId={textureId}>
-        Greveyard 
+      <Card
+        title={GREVEYARD.title}
+        subtitle={GREVEYARD.subtitle}
+        paragrapghes={GREVEYARD.paragraphes}
+      />
     </Container>
   )
 }
