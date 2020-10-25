@@ -5,6 +5,7 @@ import BIO from "../contents/BIO.json";
 
 import Container from "../components/container"
 import Card from "../components/card"
+import Paragraph from "../components/Paragraph";
 
 const textureId = "Entrance";
 const Texture =
@@ -15,6 +16,7 @@ const Texture =
     stroke={COLORPALETTE.darkOrange}
     background={COLORPALETTE.orange}
   />
+const content = <Paragraph paragrapghes={BIO.paragraphes} />
 
 const Bio = () => {
 
@@ -23,7 +25,7 @@ const Bio = () => {
         <Card 
           title={BIO.title} 
           subtitle={BIO.subtitle}
-          paragrapghes={BIO.paragraphes}
+          subContent={content}
         />
     </Container>
   )

@@ -35,10 +35,8 @@ const Subtitle = styled.div`
     font-size: 1.3em;
     font-style: italic;
 `
-const Paragrapgh = styled.div`
-`
 
-const Card = ({ title, subtitle, paragrapghes }) => {
+const Card = ({ title, subtitle, subContent }) => {
     return (
         <CardContainer>
             <StyledCard>
@@ -47,9 +45,7 @@ const Card = ({ title, subtitle, paragrapghes }) => {
                     <Title>{title}</Title>
                     <Subtitle>{subtitle}</Subtitle>
                     <br />
-                    <Paragrapgh>
-                        { paragrapghes.map((para) => <p>{para}</p>) }
-                    </Paragrapgh>
+                    { subContent }
                 </Content>
             </StyledCard>
         </CardContainer>

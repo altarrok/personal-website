@@ -24,7 +24,7 @@ const Greveyard = () => {
       <Card
         title={GREVEYARD.title}
         subtitle={GREVEYARD.subtitle}
-        paragrapghes={GREVEYARD.paragraphes}
+        subContent={}
       />
     </Container>
   )

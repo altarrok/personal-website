@@ -24,7 +24,7 @@ const Projects = () => {
         <Card 
           title={PROJECTS.title} 
           subtitle={PROJECTS.subtitle}
-          paragrapghes={PROJECTS.paragraphes}
+          subContent={}
         />
     </Container>
   )
