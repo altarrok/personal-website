@@ -1,5 +1,6 @@
 import React from "react"
 import Circles from 'react-svg-textures/es/Circles';
+import COLORPALETTE from "../COLORPALETTE.json";
 
 import Container from "../components/container"
 
@@ -7,9 +8,10 @@ const textureId = "Entrance";
 const Texture =
   <Circles
     id={textureId}
-    strokeWidth={2}
-    stroke='black'
-    background='white'
+    strokeWidth={5}
+    size={25}
+    stroke={COLORPALETTE.darkOrange}
+    background={COLORPALETTE.orange}
   />
 
 const Bio = () => {
