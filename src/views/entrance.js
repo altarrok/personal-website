@@ -6,7 +6,7 @@ const Entrance = () => {
 
   return (
     <Container>
-        Entrance 
+      Entrance
     </Container>
   )
 }

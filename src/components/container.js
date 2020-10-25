@@ -5,12 +5,30 @@ import { css } from "@emotion/core"
 const containerStyle = css`
   min-height: 100vh;
   max-width: 100vw;
+  position: relative;
 `
 
-const Container = ({ children }) => {
+const bgTextureStyle = css`
+    position: absolute;
+    z-index: -100; 
+`
+
+const childStyle = css`
+    position: relative;
+    z-index: 10;
+`
+
+const Container = ({ children, Texture, textureId }) => {
     return (
         <div css={containerStyle}>
-            {children}
+            <svg width="100%" height="100%" css={bgTextureStyle}>
+                {Texture}
+                <rect width="100%" height="100%" fill={`url(#${textureId})`}>
+                </rect>
+            </svg>
+            <div css={childStyle}>
+                {children}
+            </div>
         </div>
     );
 }
