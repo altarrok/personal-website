@@ -13,7 +13,7 @@ const StyledCard = styled.div`
     margin: 5% auto;
     background-color: ${COLORPALETTE.white};
     position: relative;
-    box-shadow: 0.4em 0.4em rgba(21, 27, 31, 0.6);
+    box-shadow: 0.7em 0.7em rgba(21, 27, 31, 0.5);
 `
 
 const LeftBar = styled.div`
@@ -24,7 +24,7 @@ const LeftBar = styled.div`
 `
 
 const Content = styled.div`
-    padding: 1% 10%;
+    padding: 2% 10%;
 `
 
 const Title = styled.div`
@@ -48,11 +48,7 @@ const Card = ({ title, subtitle, paragrapghes }) => {
                     <Subtitle>{subtitle}</Subtitle>
                     <br />
                     <Paragrapgh>
-                        {
-                            paragrapghes.map((para) => {
-                                return <p>{para}</p>
-                            })    
-                        }
+                        { paragrapghes.map((para) => <p>{para}</p>) }
                     </Paragrapgh>
                 </Content>
             </StyledCard>
