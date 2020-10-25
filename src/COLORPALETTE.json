@@ -2,7 +2,13 @@
     "orange": "#e4572eff", 
     "darkOrange": "#ce431aff",
     "bordeaux": "#5c1a1bff",
+    "darkBordeaux": "#4e1616ff",
     "purple": "#5941a9ff",
+    "darkPurple": "#4b378fff",
     "white": "#f4f7f5ff",
-    "cyan": "#43aa8bff"
+    "darkWhite": "c9d7ceff",
+    "cyan": "#43aa8bff",
+    "darkCyan": "#389076ff",
+    "black": "#36454Fff",
+    "darkBlack": "#2d3a43ff"
 }
