@@ -16,6 +16,9 @@ const bgTextureStyle = css`
 const childStyle = css`
     position: relative;
     z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    display: table;
 `
 
 const Container = ({ children, Texture, textureId }) => {
