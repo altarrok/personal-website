@@ -5,7 +5,7 @@ import COLORPALETTE from "../COLORPALETTE.json"
 const Footer = () => {
 
   const FooterDiv = styled.div`
-    min-height: 5vh;
+    min-height: 3.2em;
     position: relative;
     background-color: ${COLORPALETTE.darkBlack}
   `
@@ -16,12 +16,14 @@ const Footer = () => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: ${COLORPALETTE.darkWhite}
+    color: ${COLORPALETTE.darkWhite};
+    text-align: center;
+    font-size: 0.8em;
   `
 
   return (
     <FooterDiv>
-      <StyledSpan>Made by Altay Batuhan. Using Gatsby and hosted with Netlify.</StyledSpan>
+      <StyledSpan>Made by Altay Batuhan.<br />Using Gatsby and hosted with Netlify.</StyledSpan>
     </FooterDiv>
   )
 }
