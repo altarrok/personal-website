@@ -21,6 +21,16 @@
             "paragraphes": [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel magna lorem. In hac habitasse platea dictumst. Nunc odio arcu, viverra ut augue sed, aliquet dapibus lectus. Aliquam non libero eget felis congue tincidunt et eu felis. Fusce nec tempor erat, vitae elementum ipsum. Aenean quis tellus in felis tristique dictum mattis ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
             ]
+        },
+        {
+            "img": "https://i.ibb.co/7YKfMBK/T-Saint-Joseph-sj-okul.jpg",
+            "title": "Saint-Joseph",
+            "role": "French Baccalaureate",
+            "location": "Istanbul, Turkey",
+            "time": "2013-2018",
+            "paragraphes": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel magna lorem. In hac habitasse platea dictumst. Nunc odio arcu, viverra ut augue sed, aliquet dapibus lectus. Aliquam non libero eget felis congue tincidunt et eu felis. Fusce nec tempor erat, vitae elementum ipsum. Aenean quis tellus in felis tristique dictum mattis ac magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            ]
         }
     ]
 }
