@@ -24,7 +24,7 @@ const Item = styled.div`
 }
 `
 
-const ImageContainer = styled.css`
+const ImageContainer = styled.div`
 @media (min-width: 768px) {
     margin-right: 2%;   
     width: 50%;
@@ -89,9 +89,9 @@ const InfoTime = styled.div`
 const MyJourneySubContent = ({ entries }) => {
     return (
         <Container>
-            {entries.map((entry) => {
+            {entries.map((entry, index) => {
                 return (
-                    <Item>
+                    <Item key={index}>
                         <ImageContainer>
                             <InfoLocation>{entry.location}</InfoLocation>
                             <InfoTime>{entry.time}</InfoTime>

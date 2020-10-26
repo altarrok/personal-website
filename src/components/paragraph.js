@@ -7,7 +7,7 @@ const Para = styled.div`
 const Paragraph = ({ paragraphes }) => {
     return (
         <Para>
-            { paragraphes.map((para) => <p>{para}</p>)}
+            { paragraphes.map((para, index) => <p key={index}>{para}</p>)}
         </Para>
     );
 }
