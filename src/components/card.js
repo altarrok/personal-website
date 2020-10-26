@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react"
 import COLORPALETTE from "../COLORPALETTE.json"
+import { css } from "@emotion/core";
 
 const CardContainer = styled.div`
     display:table-cell;
@@ -21,6 +22,7 @@ const LeftBar = styled.div`
     background-color: ${COLORPALETTE.darkWhite};
     height: 100%;
     position: absolute;
+    z-index:1;
 `
 
 const Content = styled.div`
@@ -36,10 +38,40 @@ const Subtitle = styled.div`
     font-style: italic;
 `
 
-const Card = ({ title, subtitle, subContent }) => {
+const IconWrapper = styled.div`
+@media (min-width: 768px) {
+    border-radius: 50%;
+    width: 10%;
+    height: auto;
+    padding-top: 10%;
+    background-color: ${COLORPALETTE.bordeaux};
+    position: absolute;
+    z-index: 10;
+    left: -2.5%;
+    top: 5%;
+    border: 0.3em solid ${COLORPALETTE.darkBordeaux};
+}
+`
+
+const iconStyle = css`
+@media (min-width: 768px) {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    font-size: 300%;
+    transform: translate(-50%, -50%);
+}
+@media (max-width: 767px) {
+    display: none;
+}
+`
+
+const Card = ({ title, subtitle, subContent, iconFactory }) => {
     return (
         <CardContainer>
             <StyledCard>
+                <IconWrapper>{iconFactory(iconStyle)}</IconWrapper>
                 <LeftBar />
                 <Content>
                     <Title>{title}</Title>

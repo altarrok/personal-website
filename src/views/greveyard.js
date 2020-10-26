@@ -2,6 +2,7 @@ import React from "react"
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
 import GREVEYARD from "../contents/GREVEYARD.json";
+import { GiTombstone } from "react-icons/gi";
 
 import Container from "../components/container"
 import Card from "../components/card"
@@ -15,7 +16,11 @@ const Texture =
     stroke={COLORPALETTE.darkBlack}
     background={COLORPALETTE.black}
     d={"crosses"}
-  />
+  />;
+
+const iconFactory = (css) => {
+  return (<GiTombstone css={css} />);
+}
 
 const Greveyard = () => {
 
@@ -25,6 +30,7 @@ const Greveyard = () => {
         title={GREVEYARD.title}
         subtitle={GREVEYARD.subtitle}
         subContent={undefined}
+        iconFactory={iconFactory}
       />
     </Container>
   )

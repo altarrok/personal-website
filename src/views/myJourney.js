@@ -2,6 +2,7 @@ import React from "react"
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
 import MYJOURNEY from "../contents/MYJOURNEY.json";
+import { GiJourney } from "react-icons/gi";
 
 import Container from "../components/container"
 import Card from "../components/card"
@@ -21,6 +22,11 @@ const content = <MyJourneySubContent
   entries={MYJOURNEY.content}
 />
 
+const iconFactory = (css) => {
+  return (<GiJourney css={css} />);
+}
+
+
 const MyJourney = () => {
 
   return (
@@ -29,6 +35,7 @@ const MyJourney = () => {
           title={MYJOURNEY.title} 
           subtitle={MYJOURNEY.subtitle}
           subContent={content}
+          iconFactory={iconFactory}
         />
     </Container>
   )

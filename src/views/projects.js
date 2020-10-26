@@ -2,6 +2,7 @@ import React from "react"
 import Lines from 'react-svg-textures/es/Lines';
 import COLORPALETTE from "../COLORPALETTE.json";
 import PROJECTS from "../contents/PROJECTS.json";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 import Container from "../components/container"
 import Card from "../components/card"
@@ -15,7 +16,11 @@ const Texture =
     stroke={COLORPALETTE.darkPurple}
     background={COLORPALETTE.purple}
     orientation={"6/8"}
-  />
+  />;
+
+const iconFactory = (css) => {
+  return (<AiOutlineFundProjectionScreen css={css} />);
+}
 
 const Projects = () => {
 
@@ -25,6 +30,7 @@ const Projects = () => {
           title={PROJECTS.title} 
           subtitle={PROJECTS.subtitle}
           subContent={undefined}
+          iconFactory={iconFactory}
         />
     </Container>
   )
