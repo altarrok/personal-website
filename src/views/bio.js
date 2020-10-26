@@ -6,7 +6,7 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 
 import Container from "../components/container"
 import Card from "../components/card"
-import Paragraph from "../components/Paragraph";
+import Paragraph from "../components/paragraph";
 
 const textureId = "Entrance";
 const Texture =

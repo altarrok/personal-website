@@ -95,7 +95,7 @@ const MyJourneySubContent = ({ entries }) => {
                         <ImageContainer>
                             <InfoLocation>{entry.location}</InfoLocation>
                             <InfoTime>{entry.time}</InfoTime>
-                            <img src={entry.img} css={imageStyle} />
+                            <img src={entry.img} css={imageStyle} alt="" />
                         </ImageContainer>
                         <VerticalLine />
                         <InfoContainer>
