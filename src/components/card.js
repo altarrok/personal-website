@@ -28,11 +28,11 @@ const Content = styled.div`
 `
 
 const Title = styled.div`
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
 `
 const Subtitle = styled.div`
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-style: italic;
 `
 

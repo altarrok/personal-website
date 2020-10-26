@@ -16,7 +16,7 @@ const Texture =
     stroke={COLORPALETTE.darkOrange}
     background={COLORPALETTE.orange}
   />
-const content = <Paragraph paragrapghes={BIO.paragraphes} />
+const content = <Paragraph paragraphes={BIO.paragraphes} />
 
 const Bio = () => {
 

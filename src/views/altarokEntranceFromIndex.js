@@ -24,7 +24,7 @@ const AltarokEntrance = () => {
         <Card 
           title={ALTAROKENTRANCE.title} 
           subtitle={ALTAROKENTRANCE.subtitle}
-          subContent={}
+          subContent={undefined}
         />
     </Container>
   )

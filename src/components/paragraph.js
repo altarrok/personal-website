@@ -4,10 +4,10 @@ import React from "react"
 const Para = styled.div`
 `
 
-const Paragraph = ({ paragrapghes }) => {
+const Paragraph = ({ paragraphes }) => {
     return (
         <Para>
-            { paragrapghes.map((para) => <p>{para}</p>)}
+            { paragraphes.map((para) => <p>{para}</p>)}
         </Para>
     );
 }

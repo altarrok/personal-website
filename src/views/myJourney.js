@@ -5,6 +5,7 @@ import MYJOURNEY from "../contents/MYJOURNEY.json";
 
 import Container from "../components/container"
 import Card from "../components/card"
+import MyJourneySubContent from "../components/myJourneySubContent";
 
 const textureId = "MyJourney";
 const Texture =
@@ -16,6 +17,9 @@ const Texture =
     background={COLORPALETTE.cyan}
     d={'hexagons'}
   />
+const content = <MyJourneySubContent 
+  entries={MYJOURNEY.content}
+/>
 
 const MyJourney = () => {
 
@@ -24,7 +28,7 @@ const MyJourney = () => {
         <Card 
           title={MYJOURNEY.title} 
           subtitle={MYJOURNEY.subtitle}
-          subContent={}
+          subContent={content}
         />
     </Container>
   )
