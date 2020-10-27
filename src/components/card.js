@@ -48,7 +48,7 @@ const IconWrapper = styled.div`
     position: absolute;
     z-index: 10;
     left: -2.5%;
-    top: 5%;
+    top: 1em;
     border: 0.3em solid ${COLORPALETTE.darkBordeaux};
 }
 `
