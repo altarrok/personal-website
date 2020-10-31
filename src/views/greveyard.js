@@ -6,6 +6,7 @@ import { GiTombstone } from "react-icons/gi";
 
 import Container from "../components/container"
 import Card from "../components/card"
+import GreveyardSubContent from "../components/greveryardSubContent";
 
 const textureId = "Greveyard";
 const Texture =
@@ -22,6 +23,11 @@ const iconFactory = (css) => {
   return (<GiTombstone css={css} />);
 }
 
+const SubContent = 
+  <GreveyardSubContent   
+    entries={GREVEYARD.projects}
+  />;
+
 const Greveyard = () => {
 
   return (
@@ -29,7 +35,7 @@ const Greveyard = () => {
       <Card
         title={GREVEYARD.title}
         subtitle={GREVEYARD.subtitle}
-        subContent={undefined}
+        subContent={SubContent}
         iconFactory={iconFactory}
       />
     </Container>
