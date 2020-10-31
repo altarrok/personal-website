@@ -10,5 +10,7 @@
     "cyan": "#43aa8bff",
     "darkCyan": "#389076ff",
     "black": "#36454Fff",
-    "darkBlack": "#2d3a43ff"
+    "darkBlack": "#2d3a43ff",
+    "lightCyan": "#6ef0edff",
+    "lightOrange": "#ffEfD5ff"
 }
