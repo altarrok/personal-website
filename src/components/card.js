@@ -15,6 +15,9 @@ const StyledCard = styled.div`
     background-color: ${COLORPALETTE.white};
     position: relative;
     box-shadow: 0.7em 0.7em rgba(21, 27, 31, 0.5);
+    @media (max-width: 767px) {
+        margin-top: 10%;
+    }
 `
 
 const LeftBar = styled.div`
