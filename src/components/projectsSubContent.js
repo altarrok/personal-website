@@ -78,7 +78,12 @@ const ProjectsSubContent = ({ entries }) => {
                         <TeamTitle>{entry.teamTitle}</TeamTitle>
                         <LinkContainer>
                             <GithubLink href={entry.githubLink} target="_blank" rel="noopener noreferrer"><SiGithub /></GithubLink>
-                            <ExternalLink href={entry.externalLink} target="_blank" rel="noopener noreferrer"><FiExternalLink></FiExternalLink></ExternalLink>
+                            {
+                                ( !entry.externalLink || <ExternalLink href={entry.externalLink} target="_blank" rel="noopener noreferrer">
+                                                            <FiExternalLink/>
+                                                        </ExternalLink>
+                                )
+                            }
                         </LinkContainer>
                         <Paragraph paragraphes={entry.description}/>
                     </ProjectItem>
