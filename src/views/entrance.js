@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
+import Circles from 'react-svg-textures/es/Circles';
 
 import Container from "../components/container"
 
@@ -32,10 +33,20 @@ const StraightLine = styled.span`
   }
 `
 
+const textureId = "Entrance";
+const Texture =
+  <Circles
+    id={textureId}
+    strokeWidth={5}
+    size={25}
+    stroke="white"
+    background="white"
+  />
+
 const Entrance = () => {
 
   return (
-    <Container>
+    <Container Texture={Texture} textureId={textureId}>
       <Title>
         <WelcomeMessage>Hey, I'm</WelcomeMessage>
         <Name><StraightLine />Altay<StraightLine /></Name>

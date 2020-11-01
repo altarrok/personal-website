@@ -8,7 +8,7 @@ import Container from "../components/container"
 import Card from "../components/card"
 import Paragraph from "../components/paragraph";
 
-const textureId = "Entrance";
+const textureId = "Bio";
 const Texture =
   <Circles
     id={textureId}

@@ -6,7 +6,6 @@ const containerStyle = css`
   min-height: 100vh;
   max-width: 100vw;
   position: relative;
-  background-color: white;
 `
 
 const bgTextureStyle = css`
@@ -22,7 +21,7 @@ const childStyle = css`
     display: table;
 `
 
-const Container = ({ children, Texture, textureId }) => {
+const Container = ({ children, Texture, textureId}) => {
     return (
         <div css={containerStyle}>
             <svg width="100%" height="100%" css={bgTextureStyle}>
