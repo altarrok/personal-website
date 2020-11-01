@@ -12,7 +12,7 @@ import Greveyard from "../views/greveyard"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Altay Batuhan" />
     <Entrance />
     <Bio />
     <MyJourney />
