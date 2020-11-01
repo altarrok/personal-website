@@ -6,6 +6,7 @@ const containerStyle = css`
   min-height: 100vh;
   max-width: 100vw;
   position: relative;
+  background-color: white;
 `
 
 const bgTextureStyle = css`
