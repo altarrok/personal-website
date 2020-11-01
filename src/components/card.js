@@ -17,6 +17,8 @@ const StyledCard = styled.div`
     box-shadow: 0.7em 0.7em rgba(21, 27, 31, 0.5);
     @media (max-width: 767px) {
         margin-top: 10%;
+        box-shadow: 0.3em 0.3em rgba(21, 27, 31, 0.5);
+        width:95%;
     }
 `
 
