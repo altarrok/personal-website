@@ -3,48 +3,11 @@
     "subtitle": "Here we go",
     "projects": [
         {
-            "title": "Project title",
-            "teamTitle": "inoastrum",
-            "githubLink": "http://www.google.com",
-            "externalLink": "http://www.google.com",
+            "title": "Personal Website",
+            "teamTitle": "Personal Project",
+            "githubLink": "https://github.com/altarrok/personal-website",
             "description": [
-                "Tempor esse culpa enim sunt cillum ea do ea adipisicing ut nulla tempor. Minim do eu exercitation tempor adipisicing quis anim et. Aute ad consectetur ex ad nulla commodo occaecat deserunt laboris cupidatat do. Id aliquip Lorem do tempor Lorem cillum excepteur velit ex veniam occaecat. Consectetur qui ipsum in nulla duis enim adipisicing Lorem voluptate aliquip culpa enim."
-            ]
-        },
-        {
-            "title": "Project title",
-            "teamTitle": "inoastrum",
-            "githubLink": "http://www.google.com",
-            "externalLink": "http://www.google.com",
-            "description": [
-                "Tempor esse culpa enim sunt cillum ea do ea adipisicing ut nulla tempor. Minim do eu exercitation tempor adipisicing quis anim et. Aute ad consectetur ex ad nulla commodo occaecat deserunt laboris cupidatat do. Id aliquip Lorem do tempor Lorem cillum excepteur velit ex veniam occaecat. Consectetur qui ipsum in nulla duis enim adipisicing Lorem voluptate aliquip culpa enim."
-            ]
-        },
-        {
-            "title": "Project title",
-            "teamTitle": "inoastrum",
-            "githubLink": "http://www.google.com",
-            "externalLink": "http://www.google.com",
-            "description": [
-                "Tempor esse culpa enim sunt cillum ea do ea adipisicing ut nulla tempor. Minim do eu exercitation tempor adipisicing quis anim et. Aute ad consectetur ex ad nulla commodo occaecat deserunt laboris cupidatat do. Id aliquip Lorem do tempor Lorem cillum excepteur velit ex veniam occaecat. Consectetur qui ipsum in nulla duis enim adipisicing Lorem voluptate aliquip culpa enim."
-            ]
-        },
-        {
-            "title": "Project title",
-            "teamTitle": "inoastrum",
-            "githubLink": "http://www.google.com",
-            "externalLink": "http://www.google.com",
-            "description": [
-                "Tempor esse culpa enim sunt cillum ea do ea adipisicing ut nulla tempor. Minim do eu exercitation tempor adipisicing quis anim et. Aute ad consectetur ex ad nulla commodo occaecat deserunt laboris cupidatat do. Id aliquip Lorem do tempor Lorem cillum excepteur velit ex veniam occaecat. Consectetur qui ipsum in nulla duis enim adipisicing Lorem voluptate aliquip culpa enim."
-            ]
-        },
-        {
-            "title": "Project title",
-            "teamTitle": "inoastrum",
-            "githubLink": "http://www.google.com",
-            "externalLink": "http://www.google.com",
-            "description": [
-                "Tempor esse culpa enim sunt cillum ea do ea adipisicing ut nulla tempor. Minim do eu exercitation tempor adipisicing quis anim et. Aute ad consectetur ex ad nulla commodo occaecat deserunt laboris cupidatat do. Id aliquip Lorem do tempor Lorem cillum excepteur velit ex veniam occaecat. Consectetur qui ipsum in nulla duis enim adipisicing Lorem voluptate aliquip culpa enim."
+                "My personal online space. Everything about me as a developer can be found here. What can I say.. Website Inception"
             ]
         }
     ]
