@@ -1,3 +1,5 @@
+https://www.altaybatuhan.com
+
 Personal Website written using Gatsby (React) 
 
 Content is inside JSON files in /src/contents/
