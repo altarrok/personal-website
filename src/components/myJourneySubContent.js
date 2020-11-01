@@ -2,6 +2,8 @@ import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import React from "react"
 import COLORPALETTE from "../COLORPALETTE.json";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import Paragraph from "../components/paragraph";
 
@@ -95,7 +97,7 @@ const MyJourneySubContent = ({ entries }) => {
                         <ImageContainer>
                             <InfoLocation>{entry.location}</InfoLocation>
                             <InfoTime>{entry.time}</InfoTime>
-                            <img src={entry.img} css={imageStyle} alt="" />
+                            <LazyLoadImage src={entry.img} css={imageStyle} alt="MyJourney Image" effect="blur"/>
                         </ImageContainer>
                         <VerticalLine />
                         <InfoContainer>
