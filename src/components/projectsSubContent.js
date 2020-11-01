@@ -60,6 +60,10 @@ const GithubLink = styled.a`
     color: ${COLORPALETTE.white};
     font-size: 1.7em;
     margin-right: 0.5em;
+
+    :hover {
+        color: ${COLORPALETTE.black};
+    }
 `
 
 const ExternalLink = styled.a`
