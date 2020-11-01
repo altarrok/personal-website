@@ -19,6 +19,7 @@ const StyledCard = styled.div`
         margin-top: 10%;
         box-shadow: 0.3em 0.3em rgba(21, 27, 31, 0.5);
         width:95%;
+        margin-bottom: 10%;
     }
 `
 
