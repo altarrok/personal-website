@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 import React from "react"
 import Circles from 'react-svg-textures/es/Circles';
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import COLORPALETTE from "../COLORPALETTE.json";
 
 import Container from "../components/container"
 
@@ -33,6 +35,28 @@ const StraightLine = styled.span`
   }
 `
 
+const SocialMediaLinks = styled.div`
+  font-size: 3em;
+
+  * {
+    margin: 0 0.2em;
+    cursor: pointer;
+    transition: linear 0.2s;
+  }
+
+  * :hover {
+    color: ${COLORPALETTE.purple};
+  }
+`
+
+const handleGithubClick = () => {
+  window.open('https://github.com/altarrok');
+}
+
+const handleLinkedinClick = () => {
+  window.open('https://www.linkedin.com/in/altay-batuhan/');
+}
+
 const textureId = "Entrance";
 const Texture =
   <Circles
@@ -50,6 +74,10 @@ const Entrance = () => {
       <Title>
         <WelcomeMessage>Hey, I'm</WelcomeMessage>
         <Name><StraightLine />Altay<StraightLine /></Name>
+        <SocialMediaLinks>
+          <FaGithubSquare onClick={handleGithubClick} />
+          <FaLinkedin onClick={handleLinkedinClick} />
+        </SocialMediaLinks>
       </Title>
     </Container>
   )
