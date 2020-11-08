@@ -97,6 +97,8 @@ const findImageUrlByImageName = (imageName, data) => {
             return data.UBC.publicURL;
         case "SJ_LOGO":
             return data.SJ.publicURL;
+        default:
+            return "";
     }
 }
 

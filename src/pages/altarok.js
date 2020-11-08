@@ -4,9 +4,13 @@
 
 import React from "react"
 
-const Altarok = () => (
-    <>
-    </>
-)
+const Altarok = () => {
+    return (
+        <>
+            {
+            }
+        </>
+    );
+}
 
 export default Altarok

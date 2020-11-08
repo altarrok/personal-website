@@ -77,11 +77,11 @@ const Card = ({ title, subtitle, subContent, iconFactory }) => {
     return (
         <CardContainer>
             <StyledCard>
-                <IconWrapper>{iconFactory(iconStyle)}</IconWrapper>
+                { !iconFactory || <IconWrapper>{iconFactory(iconStyle)}</IconWrapper> }
                 <LeftBar />
                 <Content>
                     <Title>{title}</Title>
-                    <Subtitle>{subtitle}</Subtitle>
+                    { !subtitle || <Subtitle>{subtitle}</Subtitle> }
                     <br />
                     { subContent }
                 </Content>
