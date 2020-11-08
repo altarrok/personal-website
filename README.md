@@ -4,6 +4,13 @@ Personal Website written using Gatsby (React)
 
 Content is inside JSON files in /src/contents/
 
+#### How to run dev server
+
+```
+npm i gatsby 
+gatsby develop
+```
+
 ### Altarok
 
 * Generating pages using Gatsby createPages API call.
@@ -21,7 +28,7 @@ Content is inside JSON files in /src/contents/
 ### Which tech did I like using
 
 * GraphQL:heart: (Really convenient)
-* Static site :running: Gatsby:heart: 
+* Static site :rocket: Gatsby:heart: 
 * Netlify:heart:
 
 ### What was hard
