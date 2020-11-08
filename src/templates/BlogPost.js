@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Paths from 'react-svg-textures/es/Paths';
 import COLORPALETTE from "../COLORPALETTE.json";
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Paragraph from "../components/paragraph";
 import Container from "../components/container";
 import Card from "../components/card";
@@ -24,10 +24,6 @@ const Texture =
 const imageStyle = css`
     width: 100%;
     height: auto;
-`
-
-const placeHolderStyle = css`
-    margin-bottom: 6px;
 `
 
 export default ({ data }) => {
