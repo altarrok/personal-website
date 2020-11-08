@@ -9,6 +9,7 @@ import Card from "../components/card";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { css } from '@emotion/core';
 import ImagePlaceHolder from "../components/imagePlaceHolder";
+import SEO from '../components/seo';
 
 const textureId = "BlogPost";
 const Texture =
@@ -44,6 +45,7 @@ export default ({ data }) => {
 
     return (
         <Layout>
+            <SEO title={currNode.title} />
             <Container Texture={Texture} textureId={textureId}>
                 <Card
                     title={currNode.title}
