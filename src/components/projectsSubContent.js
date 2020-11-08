@@ -48,10 +48,11 @@ const TeamTitle = styled.div`
     font-size: 1.1em;
     color: ${COLORPALETTE.lightCyan};
     font-weight: 600;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.4);
     width: auto;
-    padding: 0.2em;
+    padding: 0.2em 0.5em;
     display: inline-block;
+    border-radius: 0.5em;
 `
 
 const LinkContainer = styled.div`
