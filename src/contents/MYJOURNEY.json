@@ -3,7 +3,7 @@
     "subtitle": "Don't just learn, experience.",
     "content": [
         {
-            "img": "https://i.ibb.co/GC0shLJ/SAP-logo-700x357.png",
+            "img": "SAP_LOGO",
             "title": "SAP",
             "role": "Software Developer Intern",
             "location": "Vancouver, Canada",
@@ -13,7 +13,7 @@
             ]
         },
         {
-            "img": "https://i.ibb.co/kHngvT1/UBC-logo-2018-narrowsig-blue-rgb72.png",
+            "img": "UBC_LOGO",
             "title": "UBC",
             "role": "Computer Science, Bachelor of Science",
             "location": "Vancouver, Canada",
@@ -23,7 +23,7 @@
             ]
         },
         {
-            "img": "https://i.ibb.co/7YKfMBK/T-Saint-Joseph-sj-okul.jpg",
+            "img": "SJ_LOGO",
             "title": "Saint-Joseph",
             "role": "French Baccalaureate",
             "location": "Istanbul, Turkey",

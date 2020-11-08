@@ -6,6 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import Paragraph from "../components/paragraph";
+import { StaticQuery, graphql } from "gatsby";
 
 const Container = styled.div`
     margin-top: 3%;
@@ -88,7 +89,41 @@ const InfoTime = styled.div`
     margin-bottom: 3%;
 `
 
-const MyJourneySubContent = ({ entries }) => {
+const findImageUrlByImageName = (imageName, data) => {
+    switch (imageName) {
+        case "SAP_LOGO":
+            return data.SAP.publicURL;
+        case "UBC_LOGO":
+            return data.UBC.publicURL;
+        case "SJ_LOGO":
+            return data.SJ.publicURL;
+    }
+}
+
+export default function MyJourneySubContent(props) {
+    return (
+        <StaticQuery
+            query={graphql`
+                query ImageQuery {
+                    SAP: file(base: { eq: "SAP-logo.png" }) {
+                        publicURL
+                    }, 
+                    UBC: file(base: { eq: "UBC-logo.png" }) {
+                        publicURL
+                    },
+                    SJ: file(base: { eq: "SJ-logo.jpg" }) {
+                        publicURL
+                    }
+                }
+        `}
+            render={data => (
+                <ActualContent data={data} {...props} />
+            )}
+        />
+    )
+}
+
+const ActualContent = ({ data, entries }) => {
     return (
         <Container>
             {entries.map((entry, index) => {
@@ -97,7 +132,7 @@ const MyJourneySubContent = ({ entries }) => {
                         <ImageContainer>
                             <InfoLocation>{entry.location}</InfoLocation>
                             <InfoTime>{entry.time}</InfoTime>
-                            <LazyLoadImage src={entry.img} css={imageStyle} alt="MyJourney Image" effect="blur"/>
+                            <LazyLoadImage src={findImageUrlByImageName(entry.img, data)} css={imageStyle} alt="MyJourney Image" effect="blur" />
                         </ImageContainer>
                         <VerticalLine />
                         <InfoContainer>
@@ -111,5 +146,3 @@ const MyJourneySubContent = ({ entries }) => {
         </Container>
     );
 }
-
-export default MyJourneySubContent
