@@ -1,4 +1,5 @@
 {
+    "priority": "10",
     "slug": "post2",
     "imageFileName": "UBC-logo.png",
     "imageWidth": "372",

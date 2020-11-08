@@ -6,25 +6,23 @@ exports.createPages = async ({ graphql, actions, getNodesByType }) => {
     const allPosts = await graphql(`
         {
             allPostsJson {
-              edges {
-                node {
+              nodes {
                   id
                   slug
                   imageFileName
-                }
               }
             }
         }
       `);
   
     
-      allPosts.data.allPostsJson.edges.map(async (edge) => {
+      allPosts.data.allPostsJson.nodes.map(async (node) => {
       createPage({
-        path: edge.node.slug,
+        path: node.slug,
         component: path.resolve('./src/templates/BlogPost.js'),
         context: {
-          id: edge.node.id,
-          imageFileName: edge.node.imageFileName,
+          id: node.id,
+          imageFileName: node.imageFileName,
         },
       });
     });

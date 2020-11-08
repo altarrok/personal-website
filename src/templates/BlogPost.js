@@ -29,7 +29,7 @@ const imageStyle = css`
 
 export default ({ data }) => {
     const [isLoading, setIsLoading] = useState(true);
-    const currNode = data.allPostsJson.edges[0].node;
+    const currNode = data.allPostsJson.nodes[0];
     const imgURL = data.file.publicURL;
     const subContent = (
         <div>
@@ -59,14 +59,12 @@ export default ({ data }) => {
 export const query = graphql`
 query postQuery($id: String, $imageFileName: String) {
     allPostsJson(filter: {id: {eq: $id}}) {
-        edges {
-            node {
+        nodes {
                 slug
                 title
                 paragraphes
                 imageWidth
                 imageHeight
-            }
         }
     }
     file(base: {eq: $imageFileName}) {

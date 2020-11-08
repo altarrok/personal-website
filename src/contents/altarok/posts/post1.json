@@ -1,4 +1,5 @@
 {
+    "priority": "0",
     "slug": "post1",
     "imageFileName": "SAP-logo.png",
     "imageWidth": "640",
