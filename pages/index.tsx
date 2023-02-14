@@ -46,7 +46,7 @@ export default function Home() {
         <div ref={secondSectionRef} className='min-h-[110vh] bg-zinc-800 flex flex-col items-center justify-center'>
           <div className='w-full flex flex-col items-center text-white m-12'>
             <div className='text-7xl font-semibold mb-12 text-center'>My Expertise</div>
-            <div className='flex flex-row items-stretch flex-wrap justify-center align-middle w-3/4'>
+            <div className='flex flex-row items-stretch flex-wrap justify-center align-middle w-10/12'>
               <div className='min-w-[20rem] w-1/3 aspect-square border border-white p-5 flex flex-col mb-6'>
                 <div className='text-3xl font-semibold flex flex-row items-stretch mb-5 h-20'>
                   <span className='flex items-center'><HiOutlineComputerDesktop className='inline text-6xl' /></span>
