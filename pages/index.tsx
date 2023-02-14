@@ -115,7 +115,7 @@ export default function Home() {
               </div>
             </div>
             <div className='h-screen'>
-              <div className='mt-14 shadow-l -translate-y-1/2 top-1/2 bg-amber-500 w-full sticky flex flex-row justify-left p-5 py-12'>
+              <div className='mt-20 lg:mt-14 shadow-l -translate-y-1/2 top-1/2 bg-amber-500 w-full sticky flex flex-row justify-left p-5 py-12'>
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2021-Jan 2023</div>
