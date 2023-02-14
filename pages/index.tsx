@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <div className='h-screen bg-teal-600 flex flex-col justify-center items-center'>
-          <div className='w-1/2'>
+          <div className='w-11/12 lg:w-1/2'>
             <img className="w-full" src="trans_entrance.png" alt="Altay Batuhan" />
           </div>
           <div
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
         <div ref={secondSectionRef} className='min-h-[110vh] bg-zinc-800 flex flex-col items-center justify-center'>
           <div className='w-full flex flex-col items-center text-white m-12'>
-            <div className='text-7xl font-semibold mb-12'>My Expertise</div>
+            <div className='text-7xl font-semibold mb-12 text-center'>My Expertise</div>
             <div className='flex flex-row items-stretch flex-wrap justify-center align-middle w-3/4'>
               <div className='min-w-[20rem] w-1/3 aspect-square border border-white p-5 flex flex-col mb-6'>
                 <div className='text-3xl font-semibold flex flex-row items-stretch mb-5 h-20'>
@@ -88,7 +88,7 @@ export default function Home() {
           <div className='flex-1 flex flex-col'>
             <div className='h-screen'>
               <div className='shadow-l -translate-y-1/2 top-1/2 bg-amber-100 w-full sticky flex flex-row justify-left p-5 py-12'>
-                <div className='border-r border-solid border-black w-1/3 lg:w-1/5 pr-4 flex flex-col justify-start items-end'>
+                <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2018</div>
                   <div className='flex-1 flex items-center'><img src="UBC-logo.png" alt="University of British Columbia" /></div>
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
             <div className='h-screen'>
               <div className='mt-12 shadow-l -translate-y-1/2 top-1/2 bg-amber-300 w-full sticky flex flex-row justify-left p-5 py-12'>
-                <div className='border-r border-solid border-black w-1/3 lg:w-1/5 pr-4 flex flex-col justify-start items-end'>
+                <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2020-2021</div>
                   <div className='flex-1 flex items-center'><img src="SAP-logo.png" alt="SAP" /></div>
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
             <div className='h-screen'>
               <div className='mt-14 shadow-l -translate-y-1/2 top-1/2 bg-amber-500 w-full sticky flex flex-row justify-left p-5 py-12'>
-                <div className='border-r border-solid border-black w-1/3 lg:w-1/5 pr-4 flex flex-col justify-start items-end'>
+                <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2021-Jan 2023</div>
                   <img src="HT-logo.svg" alt="SAP" className='w-full flex-1' />
