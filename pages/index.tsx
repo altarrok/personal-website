@@ -83,11 +83,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='bg-teal-600 flex flex-row justify-end items-stretch pt-80'>
+        <div className='bg-teal-600 flex flex-row justify-end items-stretch pt-12 pb-12 lg:pt-80 lg:pb-0'>
           <div className='w-2/12 hidden lg:inline-block mx-6'><img src="path.svg" alt="Path" /></div>
           <div className='flex-1 flex flex-col'>
-            <div className='h-screen'>
-              <div style={{ marginTop: 'calc(300px - 7rem)' }} className='shadow-l -translate-y-1/2 top-1/2 bg-amber-100 w-full sticky flex flex-row justify-left p-5 py-12'>
+            <div className='lg:h-screen'>
+              <div className='shadow-l lg:-translate-y-1/2 lg:top-1/2 bg-amber-100 w-full lg:sticky flex flex-row justify-left p-5 py-12'>
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2018</div>
@@ -100,8 +100,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='h-screen'>
-              <div style={{ marginTop: 'calc(300px - 7rem)' }} className='shadow-l -translate-y-1/2 top-1/2 bg-amber-300 w-full sticky flex flex-row justify-left p-5 py-12'>
+            <div className='lg:h-screen'>
+              <div className='mt-12 shadow-l lg:-translate-y-1/2 lg:top-1/2 bg-amber-300 w-full lg:sticky flex flex-row justify-left p-5 py-12'>
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2020-2021</div>
@@ -114,8 +114,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='h-screen'>
-              <div style={{ marginTop: 'calc(300px - 7rem)' }} className='shadow-l -translate-y-1/2 top-1/2 bg-amber-500 w-full sticky flex flex-row justify-left p-5 py-12'>
+            <div className='lg:h-screen'>
+              <div className='mt-14 shadow-l lg:-translate-y-1/2 lg:top-1/2 bg-amber-500 w-full lg:sticky flex flex-row justify-left p-5 py-12'>
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2021-Jan 2023</div>
