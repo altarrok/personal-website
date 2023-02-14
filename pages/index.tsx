@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <main>
         <div className='h-screen bg-teal-600 flex flex-col justify-center items-center'>
-          <div className='w-11/12 lg:w-1/2'>
+          <div className='-translate-y-1/2 lg:translate-y-0 w-11/12 lg:w-3/4'>
             <img className="w-full" src="trans_entrance.png" alt="Altay Batuhan" />
           </div>
           <div
