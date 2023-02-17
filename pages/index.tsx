@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { HiOutlineComputerDesktop } from 'react-icons/hi2';
 import { DiReact } from "react-icons/di";
 import { VscTypeHierarchy } from "react-icons/vsc";
+import Image from 'next/image'
 
 const softwareDevPara = "I absolutely love software development! Seeing my work come to life and positively impact users is one of the most satisfying things in the world. The field is always changing, which keeps things interesting and ensures there's always something new to learn.";
 const webDevPara = "Web development is a true passion of mine. From writing clean and efficient code to utilizing the latest technologies and trends, I take pride in staying current and pushing the boundaries of what is possible. I really enjoy the challenge of taking a client's idea and making it a reality.";
@@ -25,7 +26,7 @@ export default function Home() {
       <main>
         <div className='h-screen bg-teal-600 flex flex-col justify-center items-center'>
           <div className='-translate-y-1/2 lg:translate-y-0 w-11/12 lg:w-3/4'>
-            <img className="w-full" src="trans_entrance.png" alt="Altay Batuhan" />
+            <Image className="w-full" src="/trans_entrance.png" alt="Altay Batuhan" width={1622} height={600} />
           </div>
           <div
             className='z-0 animate-ping absolute bottom-10 w-16 h-16 border-2 border-white flex items-center justify-center py-2'
@@ -84,14 +85,14 @@ export default function Home() {
           </div>
         </div>
         <div className='bg-teal-600 flex flex-row justify-end items-stretch pt-12 pb-12 lg:pt-80 lg:pb-0'>
-          <div className='w-2/12 hidden lg:inline-block mx-6'><img src="path.svg" alt="Path" /></div>
+          <div className='w-2/12 hidden lg:inline-block mx-6'><Image src="/path.svg" alt="Path" width={423} height={3963} /></div>
           <div className='flex-1 flex flex-col'>
             <div className='lg:h-screen'>
               <div className='shadow-l lg:-translate-y-1/2 lg:top-1/2 bg-violet-100 w-full lg:sticky flex flex-row justify-left p-5 py-12'>
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2018</div>
-                  <div className='flex-1 flex items-center'><img src="UBC-logo.png" alt="University of British Columbia" /></div>
+                  <div className='flex-1 flex items-center'><Image src="/UBC-logo.png" alt="University of British Columbia" width={372} height={117} /></div>
                 </div>
                 <div className='flex-1 ml-4 flex flex-col'>
                   <div className='text-3xl font-bold'>UBC</div>
@@ -105,7 +106,7 @@ export default function Home() {
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2020-2021</div>
-                  <div className='flex-1 flex items-center'><img src="SAP-logo.png" alt="SAP" /></div>
+                  <div className='flex-1 flex items-center'><Image src="/SAP-logo.png" alt="SAP" width={640} height={326} /></div>
                 </div>
                 <div className='flex-1 ml-4 flex flex-col'>
                   <div className='text-3xl font-bold'>SAP</div>
@@ -119,7 +120,7 @@ export default function Home() {
                 <div className='border-r border-solid border-black w-1/3 hidden lg:w-1/5 pr-4 sm:flex flex-col justify-start items-end'>
                   <div className='text-lg font-semibold'>Vancouver, Canada</div>
                   <div className='mb-2'>Sept 2021-Jan 2023</div>
-                  <img src="HT-logo.svg" alt="SAP" className='w-full flex-1' />
+                  <Image src="/HT-logo.svg" alt="SAP" className='w-full flex-1' width={1374} height={523} />
                 </div>
                 <div className='flex-1 ml-4 flex flex-col'>
                   <div className='text-3xl font-bold'>HackerTables (start-up)</div>
