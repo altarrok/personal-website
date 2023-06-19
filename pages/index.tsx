@@ -17,21 +17,21 @@ const LandingPage: NextPage = () => {
         <FlippableCard
           title='Software Development'
           icon={<SiDevdotto />}
-          para="I absolutely love software development! Seeing my work come to life and positively impact users is one of the most satisfying things in the world. The field is always changing, which keeps things interesting and ensures there's always something new to learn."
+          para="I love being a software developer. It's great to see how my work can help people, making a real difference in their lives. I enjoy the daily challenges and the chance to learn something new, as technology is always changing. But it's not just about writing code; it's about working together as a team to solve problems and create something that can truly make a difference"
         />
       </div>
       <div className="col-span-2 col-start-3 row-start-6">
         <FlippableCard
           title='Web Dev'
           icon={<TbBrowser />}
-          para="Web development is a true passion of mine. From writing clean and efficient code to utilizing the latest technologies and trends, I take pride in staying current and pushing the boundaries of what is possible. I really enjoy the challenge of taking a client's idea and making it a reality."
+          para="In web development, I believe each line of code I craft has the potential to improve someone's online experience"
         />
       </div>
       <div className="col-span-2 col-start-3 row-start-7">
       <FlippableCard
           title='DevOps'
           icon={<TbInfinity />}
-          para="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quos repudiandae omnis distinctio quam molestias itaque ut, temporibus illo soluta? Rerum, nemo aperiam. Suscipit, quos illum? Adipisci odio omnis molestiae!"
+          para="Don't just keep the lights on, ensure they're energy efficient and perfectly dimmable!"
         />
       </div>
       <div className="col-span-4 row-start-[8]">Portfolio Title</div>
