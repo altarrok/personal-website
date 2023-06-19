@@ -10,10 +10,13 @@ export const FlippableCard: React.FC<{
     return (
         <div
             onClick={() => setOpen((prevOpen) => !prevOpen)}
-            className="w-full h-full bg-white overflow-hidden rounded-3xl relative cursor-pointer hover:scale-[0.98] transition-all border-2 border-solid border-white"
+            className="w-full h-full overflow-hidden rounded-3xl relative cursor-pointer hover:scale-[0.95] transition-all border-4 border-solid border-transparent"
+            style={{
+                background: "linear-gradient(white, white) padding-box, linear-gradient(to bottom right, #c33764, #1d2671) border-box",
+            }}
         >
             <div
-                className="w-full h-full bg-black text-white flex items-center absolute transition-all duration-700 z-10"
+                className="w-full bg-black text-white flex items-center absolute transition-all duration-700 z-10"
                 style={
                     open ? {
                         height: "2rem",
