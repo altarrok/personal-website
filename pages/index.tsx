@@ -14,7 +14,7 @@ const LandingPage: NextPage = () => {
   const portfolioSectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="grid grid-cols-4 grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative pb-[50vh]">
+    <main className="grid grid-cols-4 grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative">
       <div className="col-span-4 row-span-2" style={{ height: 'calc(50vh - 1.5rem)' }}>BIG TITLE</div>
       <div className="col-span-2 row-start-3">
         <ShortcutCard
@@ -74,11 +74,31 @@ const LandingPage: NextPage = () => {
         <RollingCard
           from='left'
           title="CO-OP Web Support"
-          para=''
+          para='WIP'
         />
       </div>
-      <div className="row-span-2 col-start-4 row-start-[12]"><AppearingCard />PHSA metadata</div>
-      <div className="row-span-2 col-start-1 row-start-[14]"><AppearingCard />HackerTables metadata</div>
+      <div className="row-span-2 col-start-4 row-start-[12]">
+        <AppearingCard
+          img={{
+            src: "/images/UBC-logo.webp",
+            alt: "University of British Columbia"
+          }}
+          title='PHSA'
+          subtitle='Burnaby, Canada'
+          footer='May-Sept 2023'
+        />
+      </div>
+      <div className="row-span-2 col-start-1 row-start-[14]">
+        <AppearingCard
+          img={{
+            src: "/images/HT-logo.svg",
+            alt: "HackerTables"
+          }}
+          title='HackerTables'
+          subtitle='Vancouver, Canada'
+          footer='Sept 2021-Jan 2023'
+        />
+      </div>
       <div className="col-span-3 col-start-2 row-span-2 row-start-[14]">
         <RollingCard
           from='right'
@@ -93,8 +113,28 @@ const LandingPage: NextPage = () => {
           para='My internship as a software developer at SAP provided valuable experience in real-world projects. I learned about Agile software development and team collaboration. I gained hands-on experience with various programming languages and tools. Mentorship from experienced developers taught me best practices in software development. The internship exposed me to the challenges and complexities of enterprise software development. I learned how to work with large code bases and handle complex projects. I got a better understanding of the software development industry. The internship helped me develop my technical skills and problem-solving abilities. I gained a broader perspective on the field of computer science. Overall, it was a valuable and enlightening experience.'
         />
       </div>
-      <div className="row-span-2 col-start-4 row-start-[16]"><AppearingCard />SAP metadata</div>
-      <div className="row-span-2 col-start-1 row-start-[18]"><AppearingCard />UBC metadata</div>
+      <div className="row-span-2 col-start-4 row-start-[16]">
+        <AppearingCard
+          img={{
+            src: "/images/SAP-logo.webp",
+            alt: "SAP"
+          }}
+          title='SAP'
+          subtitle='Vancouver, Canada'
+          footer='Sept 2020-2021'
+        />
+      </div>
+      <div className="row-span-2 col-start-1 row-start-[18]">
+        <AppearingCard
+          img={{
+            src: "/images/UBC-logo.webp",
+            alt: "University of British Columbia"
+          }}
+          title='UBC'
+          subtitle='Vancouver, Canada'
+          footer='Sept 2018-Dec 2023'
+        />
+      </div>
       <div className="col-span-3 col-start-2 row-span-2 row-start-[18]">
         <RollingCard
           from='right'
