@@ -4,6 +4,8 @@ import { SiDevdotto } from "react-icons/si";
 import { TbBrowser, TbInfinity } from "react-icons/tb";
 import { ShortcutCard } from '../components/ShortcutCard';
 import { useRef } from 'react';
+import { RollingCard } from '../components/RollingCard';
+import { AppearingCard } from '../components/AppearingCard';
 
 
 const LandingPage: NextPage = () => {
@@ -12,8 +14,8 @@ const LandingPage: NextPage = () => {
   const portfolioSectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <main className="grid grid-cols-4 grid-rows-18 gap-4 p-4 w-full min-h-screen bg-black">
-      <div className="col-span-4 row-span-2 h-[50vh]">BIG TITLE</div>
+    <main className="grid grid-cols-4 grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative pb-[50vh]">
+      <div className="col-span-4 row-span-2" style={{ height: 'calc(50vh - 1.5rem)' }}>BIG TITLE</div>
       <div className="col-span-2 row-start-3">
         <ShortcutCard
           text='Expertise'
@@ -68,14 +70,38 @@ const LandingPage: NextPage = () => {
       <div className="col-span-2 col-start-3 row-start-[10]">Project 4</div>
       <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">Experience</div>
       {/* Rolling cards; when scrolled, they roll open */}
-      <div className="col-span-3 col-start-1 row-span-2 row-start-[12]">PHSA</div>
-      <div className="row-span-2 col-start-4 row-start-[12]">PHSA metadata</div>
-      <div className="row-span-2 col-start-1 row-start-[14]">HackerTables metadata</div>
-      <div className="col-span-3 col-start-2 row-span-2 row-start-[14]">HackerTables</div>
-      <div className="col-span-3 col-start-1 row-span-2 row-start-[16]">SAP</div>
-      <div className="row-span-2 col-start-4 row-start-[16]">SAP metadata</div>
-      <div className="row-span-2 col-start-1 row-start-[18]">UBC metadata</div>
-      <div className="col-span-3 col-start-2 row-span-2 row-start-[18]">UBC</div>
+      <div className="col-span-3 col-start-1 row-span-2 row-start-[12]">
+        <RollingCard
+          from='left'
+          title="CO-OP Web Support"
+          para=''
+        />
+      </div>
+      <div className="row-span-2 col-start-4 row-start-[12]"><AppearingCard />PHSA metadata</div>
+      <div className="row-span-2 col-start-1 row-start-[14]"><AppearingCard />HackerTables metadata</div>
+      <div className="col-span-3 col-start-2 row-span-2 row-start-[14]">
+        <RollingCard
+          from='right'
+          title="Lead Developer"
+          para='During my role as CTO at HackerTables, I was responsible for leading the technical side of the company and ensuring that our products and services met the needs of our customers. I worked closely with the rest of the leadership team to set the technical direction of the company and to make strategic decisions about the products and technologies we used. I also managed a team of developers and other technical staff, providing guidance and mentorship to help them grow and develop their skills. I also played a key role in building and maintaining our technical infrastructure, ensuring that it was secure, scalable, and able to handle the demands of a growing user base. Additionally, I was involved in the development of new features and products, working closely with the product team to identify and implement new features and improvements.'
+        />
+      </div>
+      <div className="col-span-3 col-start-1 row-span-2 row-start-[16]">
+        <RollingCard
+          from='left'
+          title="Software Developer Intern"
+          para='My internship as a software developer at SAP provided valuable experience in real-world projects. I learned about Agile software development and team collaboration. I gained hands-on experience with various programming languages and tools. Mentorship from experienced developers taught me best practices in software development. The internship exposed me to the challenges and complexities of enterprise software development. I learned how to work with large code bases and handle complex projects. I got a better understanding of the software development industry. The internship helped me develop my technical skills and problem-solving abilities. I gained a broader perspective on the field of computer science. Overall, it was a valuable and enlightening experience.'
+        />
+      </div>
+      <div className="row-span-2 col-start-4 row-start-[16]"><AppearingCard />SAP metadata</div>
+      <div className="row-span-2 col-start-1 row-start-[18]"><AppearingCard />UBC metadata</div>
+      <div className="col-span-3 col-start-2 row-span-2 row-start-[18]">
+        <RollingCard
+          from='right'
+          title="Computer Science, Bachelor of Science"
+          para='I am in my 4th year of Bachelor of Science in Computer Science at UBC. My major has provided me with a solid foundation in the fundamentals of computer science. I have learned programming languages, algorithms and data structures, software engineering, and various other computer science concepts. I have also gained experience in working on real-world projects and have honed my problem-solving and critical thinking skills. Additionally, I have been able to apply my knowledge in a practical setting by participating in internships and other opportunities. My degree has equipped me with the knowledge and skills necessary to excel in the field of computer science and has prepared me to take on new challenges and opportunities in the future.'
+        />
+      </div>
     </main>
   );
 }

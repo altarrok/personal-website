@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        '18': 'repeat(18, minmax(0, 1fr))',
+        '19': 'repeat(19, minmax(0, 1fr))',
       },
       animation: {
         'h-scroll': 'hscroll 5s linear infinite',
