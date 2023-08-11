@@ -6,7 +6,22 @@ import { ShortcutCard } from '../components/ShortcutCard';
 import { useRef } from 'react';
 import { RollingCard } from '../components/RollingCard';
 import { AppearingCard } from '../components/AppearingCard';
+import { ProjectCard } from '../components/ProjectCard';
 
+/*
+  TODO
+  -----
+  > Project cards
+    > Project Card
+    > Project Page
+    > Page transition
+  > Title sections
+  > Custom Scrollbar
+  > CMS
+    > Content Management for Projects
+    > (BONUS) Content Management for Experiences
+  > SEO
+*/
 
 const LandingPage: NextPage = () => {
   const expertiseSectionRef = useRef<HTMLDivElement>(null);
@@ -64,12 +79,11 @@ const LandingPage: NextPage = () => {
       </div>
       <div ref={portfolioSectionRef} className="col-span-4 row-start-[8]">Portfolio Title</div>
       {/* Project Cards: When clicked, transition to the project page */}
-      <div className="col-span-2 col-start-1 row-start-[9]">Project 1</div>
+      <div className="col-span-2 col-start-1 row-start-[9]"><ProjectCard /></div>
       <div className="col-span-2 col-start-3 row-start-[9]">Project 2</div>
       <div className="col-span-2 col-start-1 row-start-[10]">Project 3</div>
       <div className="col-span-2 col-start-3 row-start-[10]">Project 4</div>
       <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">Experience</div>
-      {/* Rolling cards; when scrolled, they roll open */}
       <div className="col-span-3 col-start-1 row-span-2 row-start-[12]">
         <RollingCard
           from='left'
