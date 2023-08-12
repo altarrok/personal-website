@@ -21,6 +21,8 @@ import { ProjectCard } from '../components/ProjectCard';
     > Content Management for Projects
     > (BONUS) Content Management for Experiences
   > SEO
+  > FlippableCard
+    > Show "Click to reveal" message when hover
 */
 
 const LandingPage: NextPage = () => {
@@ -79,10 +81,30 @@ const LandingPage: NextPage = () => {
       </div>
       <div ref={portfolioSectionRef} className="col-span-4 row-start-[8]">Portfolio Title</div>
       {/* Project Cards: When clicked, transition to the project page */}
-      <div className="col-span-2 col-start-1 row-start-[9]"><ProjectCard /></div>
-      <div className="col-span-2 col-start-3 row-start-[9]">Project 2</div>
-      <div className="col-span-2 col-start-1 row-start-[10]">Project 3</div>
-      <div className="col-span-2 col-start-3 row-start-[10]">Project 4</div>
+      <div className="col-span-2 col-start-1 row-start-[9]">
+        <ProjectCard
+          bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
+          projectTitle='Woo'
+        />
+      </div>
+      <div className="col-span-2 col-start-3 row-start-[9]">
+        <ProjectCard
+          bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
+          projectTitle='Woo'
+        />
+      </div>
+      <div className="col-span-2 col-start-1 row-start-[10]">
+        <ProjectCard
+          bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
+          projectTitle='Woo'
+        />
+      </div>
+      <div className="col-span-2 col-start-3 row-start-[10]">
+        <ProjectCard
+          bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
+          projectTitle='Woo'
+        />
+      </div>
       <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">Experience</div>
       <div className="col-span-3 col-start-1 row-span-2 row-start-[12]">
         <RollingCard
