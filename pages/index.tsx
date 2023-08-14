@@ -12,14 +12,12 @@ import { ProjectCard } from '../components/ProjectCard';
   TODO
   -----
   > Project cards
-    > Project Card
-    > Project Page
-    > Page transition
+    > Page transitions
   > Title sections
   > Custom Scrollbar
   > CMS
     > Content Management for Projects
-    > (BONUS) Content Management for Experiences
+    > Content Management for Experiences
   > SEO
   > FlippableCard
     > Show "Click to reveal" message when hover
@@ -85,24 +83,28 @@ const LandingPage: NextPage = () => {
         <ProjectCard
           bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
           projectTitle='Woo'
+          projectSlug='test'
         />
       </div>
       <div className="col-span-2 col-start-3 row-start-[9]">
         <ProjectCard
           bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
           projectTitle='Woo'
+          projectSlug='test'
         />
       </div>
       <div className="col-span-2 col-start-1 row-start-[10]">
         <ProjectCard
           bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
           projectTitle='Woo'
+          projectSlug='test'
         />
       </div>
       <div className="col-span-2 col-start-3 row-start-[10]">
         <ProjectCard
           bgImageUrl="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=1800&t=st=1691781076~exp=1691781676~hmac=60efc9c4d9c98f3df1365e3e4d0664e4ea0c197744d615f314f2ab8b8acdf08a"
           projectTitle='Woo'
+          projectSlug='test'
         />
       </div>
       <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">Experience</div>

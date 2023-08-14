@@ -22,7 +22,7 @@ export const AppearingCard: React.FC<{
     const onScroll = useCallback(() => {
         const scrollPercentage = Math.max(0,
             Math.min(scrollPercentageThreshold,
-                1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
+                1 - ((cardRef.current?.getBoundingClientRect().top + cardRef.current?.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
             )
         );
 

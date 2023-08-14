@@ -1,13 +1,16 @@
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { HiCursorClick } from "react-icons/hi";
 
 export const ProjectCard: React.FC<{
     bgImageUrl: string,
     projectTitle: string,
-}> = ({ bgImageUrl, projectTitle }) => {
+    projectSlug: string,
+}> = ({ bgImageUrl, projectTitle, projectSlug }) => {
     return (
-        <button
-            className="w-full h-full rounded-3xl cursor-pointer relative overflow-hidden"
-            onClick={() => console.log(123)}
+        <Link
+            className="block w-full h-full rounded-3xl cursor-pointer relative overflow-hidden"
+            href={`/project/${projectSlug}`}
         >
             <div className="absolute z-10 w-full h-full bg-black opacity-0 hover:opacity-75 transition-opacity flex items-center justify-center">
                 <h2 className="text-white font-bold text-3xl">{projectTitle}</h2>
@@ -19,6 +22,6 @@ export const ProjectCard: React.FC<{
                     backgroundImage: `url(${bgImageUrl})`,
                 }}
             />
-        </button>
+        </Link>
     );
 }
