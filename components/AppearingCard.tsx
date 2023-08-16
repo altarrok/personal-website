@@ -20,21 +20,23 @@ export const AppearingCard: React.FC<{
     })
 
     const onScroll = useCallback(() => {
-        const scrollPercentage = Math.max(0,
-            Math.min(scrollPercentageThreshold,
-                1 - ((cardRef.current?.getBoundingClientRect().top + cardRef.current?.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
-            )
-        );
+        if (cardRef.current) {
+            const scrollPercentage = Math.max(0,
+                Math.min(scrollPercentageThreshold,
+                    1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
+                )
+            );
 
-        setScrollPercentage(scrollPercentage);
+            setScrollPercentage(scrollPercentage);
+        }
     }, [cardRef.current])
 
     useEffect(() => {
-        if (cardRef.current) {
-            window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        
+        window.addEventListener('scroll', onScroll, { passive: true });
 
-            return () => window.removeEventListener('scroll', onScroll);
-        }
+        return () => window.removeEventListener('scroll', onScroll);
     }, [cardRef.current])
 
     return (

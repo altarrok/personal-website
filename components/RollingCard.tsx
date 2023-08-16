@@ -3,6 +3,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const scrollPercentageThreshold = 0.25;
 
+// TODO:: The background is broken in mobile
+
 export const RollingCard: React.FC<{
     from: "left" | "right",
     title: string,
@@ -16,21 +18,23 @@ export const RollingCard: React.FC<{
     })
 
     const onScroll = useCallback(() => {
-        const scrollPercentage = Math.max(0,
-            Math.min(scrollPercentageThreshold,
-                1 - ((cardRef.current?.getBoundingClientRect().top + cardRef.current?.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
-            )
-        );
-
-        setScrollPercentage(scrollPercentage);
+        if (cardRef.current) {
+            const scrollPercentage = Math.max(0,
+                Math.min(scrollPercentageThreshold,
+                    1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
+                )
+            );
+    
+            setScrollPercentage(scrollPercentage);
+        }
     }, [cardRef.current])
 
     useEffect(() => {
-        if (cardRef.current) {
-            window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
-            return () => window.removeEventListener('scroll', onScroll);
-        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        return () => window.removeEventListener('scroll', onScroll);
     }, [cardRef.current])
 
     return (

@@ -7,13 +7,13 @@ import { useRef } from 'react';
 import { RollingCard } from '../components/RollingCard';
 import { AppearingCard } from '../components/AppearingCard';
 import { ProjectCard } from '../components/ProjectCard';
+import { TitleSection } from '../components/TitleSection';
 
 /*
   TODO
   -----
   > Project cards
     > Page transitions
-  > Title sections
   > Custom Scrollbar
   > CMS
     > Content Management for Projects
@@ -30,7 +30,9 @@ const LandingPage: NextPage = () => {
 
   return (
     <main className="grid grid-cols-4 grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative">
-      <div className="col-span-4 row-span-2" style={{ height: 'calc(50vh - 1.5rem)' }}>BIG TITLE</div>
+      <div className="col-span-4 row-span-2" style={{ height: 'calc(50vh - 1.5rem)' }}>
+        <TitleSection>ALTAY BATUHAN</TitleSection>
+      </div>
       <div className="col-span-2 row-start-3">
         <ShortcutCard
           text='Expertise'
@@ -55,7 +57,9 @@ const LandingPage: NextPage = () => {
           })}
         />
       </div>
-      <div ref={expertiseSectionRef} className="col-span-4 row-start-5">Expertise</div>
+      <div ref={expertiseSectionRef} className="col-span-4 row-start-5">
+        <TitleSection>Expertise</TitleSection>
+      </div>
       <div className="col-span-2 row-span-2 row-start-6">
         <FlippableCard
           title='Software Development'
@@ -77,7 +81,9 @@ const LandingPage: NextPage = () => {
           para="Don't just keep the lights on, ensure they're energy efficient and perfectly dimmable!"
         />
       </div>
-      <div ref={portfolioSectionRef} className="col-span-4 row-start-[8]">Portfolio Title</div>
+      <div ref={portfolioSectionRef} className="col-span-4 row-start-[8]">
+        <TitleSection>Portfolio</TitleSection>
+      </div>
       {/* Project Cards: When clicked, transition to the project page */}
       <div className="col-span-2 col-start-1 row-start-[9]">
         <ProjectCard
@@ -107,7 +113,9 @@ const LandingPage: NextPage = () => {
           projectSlug='test'
         />
       </div>
-      <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">Experience</div>
+      <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[11]">
+        <TitleSection>Expertise</TitleSection>
+      </div>
       <div className="col-span-3 col-start-1 row-span-2 row-start-[12]">
         <RollingCard
           from='left'
