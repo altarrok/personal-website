@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiCursorClick } from "react-icons/hi";
 
@@ -19,7 +18,7 @@ export const ProjectCard: React.FC<{
             <div
                 className="w-full h-full bg-center bg-cover"
                 style={{
-                    backgroundImage: `url(${bgImageUrl})`,
+                    backgroundImage: `url('${bgImageUrl}')`,
                 }}
             />
         </Link>
