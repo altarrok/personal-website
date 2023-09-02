@@ -18,10 +18,9 @@ import Image from 'next/image';
 /*
   TODO
   -----
+  > Issue with user-select, on touch controls when a card is holded, it  is selected, which is unwanted behavior
   > Custom Scrollbar
   > SEO
-  > FlippableCard
-    > Show "Click to reveal" message when hover
   > Mobile View
     > Rolling Card
       > Text doesnt fit

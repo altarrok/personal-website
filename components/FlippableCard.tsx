@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { HiCursorClick } from "react-icons/hi";
 
 export const FlippableCard: React.FC<{
     title: string;
@@ -6,6 +7,7 @@ export const FlippableCard: React.FC<{
     para: string;
 }> = ({ title, icon, para }) => {
     const [open, setOpen] = useState(false);
+    const [overlayHovered, setOverlayHovered] = useState(false);
 
     return (
         <div
@@ -16,6 +18,23 @@ export const FlippableCard: React.FC<{
             }}
         >
             <div
+                className="absolute transition-all delay-500 left-5 text-white/75 z-20 text-xs"
+                style={
+                    (!open && overlayHovered) ? {
+                        bottom: "0.5rem",
+                        opacity: "100%",
+                    } : {
+                        bottom: "-100%",
+                        opacity: "0%",
+                        transitionDelay: "0ms",
+                    }
+                }
+            >
+                <span className="text-white/75 text-xs flex gap-1 items-center italic"><HiCursorClick /> Click to Reveal</span>
+            </div>
+            <div
+                onMouseEnter={() => setOverlayHovered(true)}
+                onMouseLeave={() => setOverlayHovered(false)}
                 className="w-full bg-black hover:bg-black/90 text-white flex items-center absolute transition-all duration-700 z-10"
                 style={
                     open ? {
@@ -41,17 +60,17 @@ export const FlippableCard: React.FC<{
                     )}
                 </div>
             </div>
-            <div 
-            className='p-8 flex flex-col lg:flex-row gap-4 items-center justify-center top-[10%] absolute pt-16 h-[90%] transition-all duration-500'
-            style={{
-                ...(
-                    open ? {
-                        top: "10%",
-                    } : {
-                        top: "0",
-                    }
-                )
-            }}
+            <div
+                className='p-8 flex flex-col lg:flex-row gap-4 items-center justify-center top-[10%] absolute pt-16 h-[90%] transition-all duration-500'
+                style={{
+                    ...(
+                        open ? {
+                            top: "10%",
+                        } : {
+                            top: "0",
+                        }
+                    )
+                }}
             >
                 <i className="text-5xl lg:text-3xl">
                     {icon}
