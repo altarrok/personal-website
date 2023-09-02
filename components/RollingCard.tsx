@@ -1,5 +1,6 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
+import RichText, { Leaf } from "./RichText";
 
 const scrollPercentageThreshold = 0.25;
 
@@ -8,7 +9,7 @@ const scrollPercentageThreshold = 0.25;
 export const RollingCard: React.FC<{
     from: "left" | "right",
     title: string,
-    para: string,
+    para: Leaf[],
 }> = ({ from, title, para }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -24,7 +25,7 @@ export const RollingCard: React.FC<{
                     1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
                 )
             );
-    
+
             setScrollPercentage(scrollPercentage);
         }
     }, [cardRef.current])
@@ -73,7 +74,9 @@ export const RollingCard: React.FC<{
                 }}
             >
                 <h3 className="text-2xl font-bold">{title}</h3>
-                <p className="text-base font-semibold text-justify">{para}</p>
+                <span className="block text-base font-semibold text-justify">
+                    <RichText content={para} />
+                </span>
             </animated.div>
         </div>
     );

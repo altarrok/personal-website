@@ -8,6 +8,14 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         '19': 'repeat(19, minmax(0, 1fr))',
+        '29': 'repeat(29, minmax(0, 1fr))',
+      },
+      gridRow: {
+        'span-8': 'span 8 / span 8',
+      },
+      height: {
+        'title': 'calc(50vh - 1.5rem)',
+        'mobile-title': 'calc(40vh - 1.5rem)'
       },
       animation: {
         'h-scroll': 'hscroll 5s linear infinite',

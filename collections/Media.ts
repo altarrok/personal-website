@@ -22,6 +22,9 @@ export type TMedia = {
 
 export const Media: CollectionConfig = {
     slug: 'media',
+	access: {
+		read: () => true,
+	},
     upload: {
         adminThumbnail: 'card',
         imageSizes: [

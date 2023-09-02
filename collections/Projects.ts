@@ -1,11 +1,15 @@
 import { CollectionConfig } from 'payload/types';
 import formatSlug from '../util/formatSlug';
 import { TMedia } from './Media';
+import { Leaf } from '../components/RichText';
 
 export const Projects: CollectionConfig = {
 	slug: 'projects',
 	admin: {
 		useAsTitle: 'title',
+	},
+	access: {
+		read: () => true,
 	},
 	fields: [
 		{
@@ -52,15 +56,4 @@ export type TProject = {
 	slug: string,
 	content: Leaf[],
 	thumbnail: TMedia,
-}
-
-export type Leaf = {
-	type: string
-	value?: {
-		url: string
-		alt: string
-	}
-	children?: Leaf[]
-	url?: string
-	[key: string]: unknown
 }

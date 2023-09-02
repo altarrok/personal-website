@@ -1,9 +1,19 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
-import { Leaf } from '../collections/Projects';
 import { Text } from 'slate';
 import escapeHTML from 'escape-html';
 import { Fragment } from 'react';
+
+export type Leaf = {
+	type: string
+	value?: {
+		url: string
+		alt: string
+	}
+	children?: Leaf[]
+	url?: string
+	[key: string]: unknown
+}
 
 const serialize = (children: Leaf[]) => children.map((node, i) => {
     if (!node) {

@@ -42,7 +42,7 @@ export const FlippableCard: React.FC<{
                 </div>
             </div>
             <div 
-            className='p-8 flex flex-row gap-4 items-center top-[10%] absolute pt-16 h-[90%] transition-all duration-500'
+            className='p-8 flex flex-col lg:flex-row gap-4 items-center justify-center top-[10%] absolute pt-16 h-[90%] transition-all duration-500'
             style={{
                 ...(
                     open ? {
@@ -53,10 +53,10 @@ export const FlippableCard: React.FC<{
                 )
             }}
             >
-                <i className="text-3xl">
+                <i className="text-5xl lg:text-3xl">
                     {icon}
                 </i>
-                <p className="flex-1 text-sm font-semibold text-justify">
+                <p className="text-base lg:flex-1 font-semibold text-justify">
                     {para}
                 </p>
             </div>

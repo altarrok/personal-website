@@ -1,13 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import type { AppProps } from 'next/app';
 
 import '../styles/globals.css';
-import { AnimatePresence } from 'framer-motion';
+import { robotoRegularFont, theBoldFont } from '../util/localFonts';
 
 const MyApp = ({ Component, pageProps }: AppProps): React.ReactElement => (
-  <AnimatePresence mode="wait" initial={false}>
+  <>
+    <style jsx global>
+      {`
+        h1,h2,h3,h4,h5 {
+          font-family: ${theBoldFont.style.fontFamily};
+        }
+
+        p {
+          font-family: ${robotoRegularFont.style.fontFamily}
+        }
+      `}
+    </style>
     <Component {...pageProps} />
-  </AnimatePresence>
+  </>
 );
 
 export default MyApp;

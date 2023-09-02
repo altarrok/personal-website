@@ -47,7 +47,7 @@ export default ProjectPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const slug = ctx.params?.slug;
 
-    const pageQuery = await payload.find({
+    const projectQuery = await payload.find({
         collection: 'projects',
         where: {
             slug: {
@@ -56,7 +56,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         },
     });
 
-    if (!pageQuery.docs[0]) {
+    if (!projectQuery.docs[0]) {
         ctx.res.statusCode = 404;
 
         return {
@@ -66,7 +66,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
     return {
         props: {
-            project: pageQuery.docs[0],
+            project: projectQuery.docs[0],
         },
     };
 };
