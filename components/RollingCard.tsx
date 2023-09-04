@@ -54,7 +54,7 @@ export const RollingCard: React.FC<{
                     backgroundImage: "url(/images/brick-wall.svg)",
                 }}
             >
-                <div className="w-full h-full bg-white/60" />
+                <div className="w-full h-full bg-white/80" />
             </animated.div>
 
             <animated.div

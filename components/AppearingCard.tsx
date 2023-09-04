@@ -51,7 +51,7 @@ export const AppearingCard: React.FC<{
                 backgroundImage: "url(/images/brick-wall.svg)",
             }}
         >
-            <div className="w-full h-full bg-white/60 p-3 flex xl:flex-col items-center justify-center gap-8 xl:gap-0">
+            <div className="w-full h-full bg-white/80 p-3 flex xl:flex-col items-center justify-center gap-8 xl:gap-0">
                 <img src={img.src} alt={img.alt} className="max-h-24 max-w-[35%] xl:max-w-[80%]" />
                 <div className="flex flex-col xl:items-center">
                     <h2 className="text-4xl font-bold">{title}</h2>

@@ -21,7 +21,6 @@ import { EmailButton } from '../components/EmailButton';
 /*
   TODO
   -----
-  > Add Socials
   > Issue with user-select, on touch controls when a card is holded, it  is selected, which is unwanted behavior
   > Custom Scrollbar
   > SEO
