@@ -2,7 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
 import RichText, { Leaf } from "./RichText";
 
-const scrollPercentageThreshold = 0.25;
+const scrollPercentageThreshold = 0.15;
 
 // TODO:: The background is broken in mobile
 
@@ -54,11 +54,11 @@ export const RollingCard: React.FC<{
                     backgroundImage: "url(/images/brick-wall.svg)",
                 }}
             >
-                <div className="w-full h-full bg-white/50" />
+                <div className="w-full h-full bg-white/60" />
             </animated.div>
 
             <animated.div
-                className="absolute z-10 rounded-3xl w-full h-full py-3 px-6"
+                className="absolute z-10 rounded-3xl w-full h-full py-3 px-6 flex flex-col justify-center"
                 style={{
                     clipPath: x.to({
                         range: [0, scrollPercentageThreshold],

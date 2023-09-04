@@ -8,10 +8,12 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         '19': 'repeat(19, minmax(0, 1fr))',
-        '29': 'repeat(29, minmax(0, 1fr))',
+        '28': 'repeat(32, minmax(0, 1fr))',
+        '37': 'repeat(41, minmax(0, 1fr))',
       },
       gridRow: {
         'span-8': 'span 8 / span 8',
+        'span-20': 'span 20 / span 20',
       },
       height: {
         'title': 'calc(50vh - 1.5rem)',

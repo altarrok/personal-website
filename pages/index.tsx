@@ -18,14 +18,15 @@ import Image from 'next/image';
 /*
   TODO
   -----
+  > Add Socials
   > Issue with user-select, on touch controls when a card is holded, it  is selected, which is unwanted behavior
   > Custom Scrollbar
   > SEO
+  > Project Card
+    > Make the thumbnail move, and carousel around different pictures, with animation delay on each card
   > Mobile View
     > Rolling Card
-      > Text doesnt fit
       > Animation looks weird on mobile
-    > Appearing Card - Text dont fit
 */
 
 const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }> = ({ projects, experiences }) => {
@@ -41,7 +42,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <link rel="icon" href="/images/favicon-light.ico" media="(prefers-color-scheme: light)" />
         <link rel="icon" href="/images/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
       </Head>
-      <main className="grid grid-cols-4 grid-rows-29 lg:grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative">
+      <main className="grid grid-cols-4 grid-rows-37 lg:grid-rows-28 xl:grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative">
         <div className="col-span-4 row-span-2 min-h-full h-mobile-title lg:h-title flex items-end justify-center">
           <Image
             src="/images/transparent-logo.png"
@@ -116,13 +117,12 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <div ref={experienceSectionRef} className="col-span-4 col-start-1 row-start-[21] lg:row-start-[12]">
           <TitleSection>Experience</TitleSection>
         </div>
-        <div className='col-span-4 row-span-8 col-start-1 row-start-[22] lg:row-start-[13] grid grid-cols-4 grid-rows-4 gap-2'>
+        <div className='col-span-4 row-span-20 xl:row-span-8 col-start-1 row-start-[22] lg:row-start-[13] grid grid-rows-20 xl:grid-rows-4 gap-6 xl:gap-2'>
           {
             experiences.map((experience, i) => (
-              <Fragment key={i}>
+              <div key={i} className="row-span-5 xl:row-span-1 grid grid-cols-1 xl:grid-cols-4 grid-rows-5 xl:grid-rows-1 gap-2">
                 <div
-                  className={`col-span-3 ${i % 2 === 0 ? 'col-start-1' : 'col-start-2'} row-span-1`}
-                  style={{ gridRowStart: i + 1 }}
+                  className={`xl:col-span-3 ${i % 2 === 0 ? 'xl:col-start-1' : 'xl:col-start-2'} row-span-4 xl:row-span-1 row-start-2 xl:row-start-1`}
                 >
                   <RollingCard
                     from={i % 2 === 0 ? 'left' : 'right'}
@@ -131,8 +131,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
                   />
                 </div>
                 <div
-                  className={`row-span-1 ${i % 2 === 0 ? 'col-start-4' : 'col-start-1'}`}
-                  style={{ gridRowStart: i + 1 }}
+                  className={`row-span-1 ${i % 2 === 0 ? 'xl:col-start-4' : 'xl:col-start-1'} row-start-1`}
                 >
                   <AppearingCard
                     img={{
@@ -144,13 +143,13 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
                     footer={experience.duration}
                   />
                 </div>
-              </Fragment>
+              </div>
             ))
           }
         </div>
       </main>
       <footer className='w-full bg-black h-12 flex items-center justify-center'>
-        <span className='text-white text-base'>Thank you for visiting my website - Altay Batuhan</span>
+        <h5 className='text-white text-base'>Thank you for visiting my website - Altay Batuhan</h5>
       </footer>
     </>
   );

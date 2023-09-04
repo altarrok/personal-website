@@ -33,7 +33,7 @@ export const AppearingCard: React.FC<{
 
     useEffect(() => {
         onScroll();
-        
+
         window.addEventListener('scroll', onScroll, { passive: true });
 
         return () => window.removeEventListener('scroll', onScroll);
@@ -51,11 +51,13 @@ export const AppearingCard: React.FC<{
                 backgroundImage: "url(/images/brick-wall.svg)",
             }}
         >
-            <div className="w-full h-full bg-white/50 p-3 flex flex-col items-center justify-center">
-                <img src={img.src} alt={img.alt} width="80%" />
-                <h2 className="text-4xl font-bold">{title}</h2>
-                <h3 className="text-2xl font-semibold">{subtitle}</h3>
-                <h4 className="text-lg italic">{footer}</h4>
+            <div className="w-full h-full bg-white/60 p-3 flex xl:flex-col items-center justify-center gap-8 xl:gap-0">
+                <img src={img.src} alt={img.alt} className="max-h-24 max-w-[35%] xl:max-w-[80%]" />
+                <div className="flex flex-col xl:items-center">
+                    <h2 className="text-4xl font-bold">{title}</h2>
+                    <h3 className="text-2xl font-semibold">{subtitle}</h3>
+                    <h4 className="text-lg italic">{footer}</h4>
+                </div>
             </div>
         </animated.div>
     );

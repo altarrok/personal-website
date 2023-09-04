@@ -61,7 +61,7 @@ export const FlippableCard: React.FC<{
                 </div>
             </div>
             <div
-                className='p-8 flex flex-col lg:flex-row gap-4 items-center justify-center top-[10%] absolute pt-16 h-[90%] transition-all duration-500'
+                className='p-8 flex flex-col lg:flex-row gap-4 items-center justify-center top-[10%] absolute pt-16 h-[90%] w-full transition-all duration-500'
                 style={{
                     ...(
                         open ? {
