@@ -14,6 +14,9 @@ import escapeHTML from 'escape-html';
 import { TExperience } from '../collections/Experiences';
 import Head from 'next/head';
 import Image from 'next/image';
+import { GithubButton } from '../components/GithubButton';
+import { LinkedinButton } from '../components/LinkedinButton';
+import { EmailButton } from '../components/EmailButton';
 
 /*
   TODO
@@ -43,14 +46,21 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <link rel="icon" href="/images/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
       </Head>
       <main className="grid grid-cols-4 grid-rows-37 lg:grid-rows-28 xl:grid-rows-19 gap-4 p-4 w-full min-h-screen bg-black relative">
-        <div className="col-span-4 row-span-2 min-h-full h-mobile-title lg:h-title flex items-end justify-center">
-          <Image
-            src="/images/transparent-logo.png"
-            alt="Altay Batuhan Logo"
-            width={1622}
-            height={600}
-            className='max-h-full w-auto'
-          />
+        <div className="col-span-4 row-span-2 min-h-full h-mobile-title lg:h-title flex flex-col items-center">
+          <div className='flex flex-0 gap-4'>
+            <GithubButton />
+            <LinkedinButton />
+            <EmailButton />
+          </div>
+          <div className='flex-1 h-0 flex items-end'>
+            <Image
+              src="/images/transparent-logo.png"
+              alt="Altay Batuhan Logo"
+              width={1622}
+              height={600}
+              className='max-h-full w-auto'
+            />
+          </div>
         </div>
         <div className="col-span-4 lg:col-span-2 row-start-3">
           <ShortcutCard
