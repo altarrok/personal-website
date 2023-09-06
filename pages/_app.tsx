@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 
 import '../styles/globals.css';
 import { robotoRegularFont, theBoldFont } from '../util/localFonts';
@@ -18,6 +19,7 @@ const MyApp = ({ Component, pageProps }: AppProps): React.ReactElement => (
       `}
     </style>
     <Component {...pageProps} />
+    <Analytics />
   </>
 );
 
