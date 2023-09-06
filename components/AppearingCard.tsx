@@ -49,7 +49,7 @@ export const AppearingCard: React.FC<{
                     output: [25, 100]
                 }).to(value => `${value}%`),
                 backgroundImage: "url(/images/brick-wall.svg)",
-                backgroundSize: "222px 150px",
+                backgroundSize: "7.4rem 5rem",
             }}
         >
             <div className="w-full h-full bg-white/80 p-3 flex xl:flex-col items-center justify-evenly xl:justify-center">

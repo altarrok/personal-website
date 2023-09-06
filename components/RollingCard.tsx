@@ -52,7 +52,7 @@ export const RollingCard: React.FC<{
                     }).to(value => `${value}%`),
                     [from]: 0,
                     backgroundImage: "url(/images/brick-wall.svg)",
-                    backgroundSize: "222px 150px",
+                    backgroundSize: "7.4rem 5rem",
                 }}
             >
                 <div className="w-full h-full bg-white/80" />

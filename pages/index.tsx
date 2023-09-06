@@ -26,9 +26,6 @@ import getPayloadClient from '@/payload/payloadClient';
   > SEO
   > Project Card
     > Make the thumbnail move, and carousel around different pictures, with animation delay on each card
-  > Mobile View
-    > Rolling Card
-      > Animation looks weird on mobile
 */
 
 const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }> = ({ projects, experiences }) => {
