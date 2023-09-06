@@ -26,19 +26,9 @@ export const Media: CollectionConfig = {
 		read: () => true,
 	},
     upload: {
-        adminThumbnail: 'card',
-        imageSizes: [
-            {
-                name: 'card',
-                width: 640,
-                height: 480,
-            },
-            {
-                name: 'feature',
-                width: 1024,
-                height: 512,
-            },
-        ],
+        adminThumbnail: ({ doc }) =>
+          `https://personal-website-media.s3.us-west-2.amazonaws.com/${doc.filename}`,
+        disableLocalStorage: true,
     },
     fields: [
         {
@@ -47,5 +37,21 @@ export const Media: CollectionConfig = {
             type: 'text',
             required: true,
         },
+        {
+            name: 'url',
+            type: 'text',
+            access: {
+              create: () => false,
+            },
+            admin: {
+              disabled: true,
+            },
+            hooks: {
+              afterRead: [
+                ({ data }) =>
+                  `https://personal-website-media.s3.us-west-2.amazonaws.com/${data!.filename}`,
+              ],
+            },
+          },
     ],
 };

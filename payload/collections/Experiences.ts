@@ -1,7 +1,7 @@
 
 import { CollectionConfig } from 'payload/types';
 import { TMedia } from './Media';
-import { Leaf } from '../components/RichText';
+import { Leaf } from '@/components/RichText';
 
 export const Experiences: CollectionConfig = {
 	slug: 'experiences',

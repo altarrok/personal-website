@@ -2,21 +2,21 @@ import { GetServerSideProps, NextPage } from 'next';
 import { FlippableCard } from '../components/FlippableCard';
 import { SiDevdotto } from "react-icons/si";
 import { TbBrowser, TbInfinity } from "react-icons/tb";
-import { ShortcutCard } from '../components/ShortcutCard';
-import { Fragment, useRef } from 'react';
-import { RollingCard } from '../components/RollingCard';
-import { AppearingCard } from '../components/AppearingCard';
-import { ProjectCard } from '../components/ProjectCard';
-import { TitleSection } from '../components/TitleSection';
-import payload from 'payload';
-import { TProject } from '../collections/Projects';
+import { ShortcutCard } from '@/components/ShortcutCard';
+import { useRef } from 'react';
+import { RollingCard } from '@/components/RollingCard';
+import { AppearingCard } from '@/components/AppearingCard';
+import { ProjectCard } from '@/components/ProjectCard';
+import { TitleSection } from '@/components/TitleSection';
+import { TProject } from '@/payload/collections/Projects';
 import escapeHTML from 'escape-html';
-import { TExperience } from '../collections/Experiences';
+import { TExperience } from '@/payload/collections/Experiences';
 import Head from 'next/head';
 import Image from 'next/image';
-import { GithubButton } from '../components/GithubButton';
-import { LinkedinButton } from '../components/LinkedinButton';
-import { EmailButton } from '../components/EmailButton';
+import { GithubButton } from '@/components/GithubButton';
+import { LinkedinButton } from '@/components/LinkedinButton';
+import { EmailButton } from '@/components/EmailButton';
+import getPayloadClient from '@/payload/payloadClient';
 
 /*
   TODO
@@ -51,7 +51,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
             <LinkedinButton />
             <EmailButton />
           </div>
-          <div className='flex-1 h-0 flex items-end'>
+          <div className='flex-1 h-0 flex items-center'>
             <Image
               src="/images/transparent-logo.png"
               alt="Altay Batuhan Logo"
@@ -64,7 +64,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <div className="col-span-4 lg:col-span-2 row-start-3">
           <ShortcutCard
             text='Expertise'
-            onScrollTrigger={() => expertiseSectionRef.current.scrollIntoView({
+            onScrollTrigger={() => expertiseSectionRef.current?.scrollIntoView({
               behavior: "smooth",
             })}
           />
@@ -72,7 +72,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <div className="col-span-4 lg:col-span-2 col-start-1 row-start-5 lg:row-start-4">
           <ShortcutCard
             text='Experience'
-            onScrollTrigger={() => experienceSectionRef.current.scrollIntoView({
+            onScrollTrigger={() => experienceSectionRef.current?.scrollIntoView({
               behavior: "smooth",
             })}
           />
@@ -80,7 +80,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
         <div className="col-span-4 lg:col-span-2 lg:row-span-2 lg:col-start-3 row-start-4 lg:row-start-3">
           <ShortcutCard
             text='Portfolio'
-            onScrollTrigger={() => portfolioSectionRef.current.scrollIntoView({
+            onScrollTrigger={() => portfolioSectionRef.current?.scrollIntoView({
               behavior: "smooth",
             })}
           />
@@ -167,6 +167,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
 export default LandingPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  const payload = await getPayloadClient();
   const projectQuery = await payload.find({
     collection: 'projects',
     sort: "-createdAt",

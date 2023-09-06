@@ -44,7 +44,7 @@ export const RollingCard: React.FC<{
             className="relative overflow-hidden w-full h-full rounded-3xl"
         >
             <animated.div
-                className="absolute rounded-3xl bg-repeat bg-contain h-full overflow-hidden"
+                className="absolute rounded-3xl bg-repeat h-full overflow-hidden"
                 style={{
                     width: x.to({
                         range: [0, scrollPercentageThreshold],
@@ -52,6 +52,7 @@ export const RollingCard: React.FC<{
                     }).to(value => `${value}%`),
                     [from]: 0,
                     backgroundImage: "url(/images/brick-wall.svg)",
+                    backgroundSize: "222px 150px",
                 }}
             >
                 <div className="w-full h-full bg-white/80" />

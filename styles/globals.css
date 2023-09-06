@@ -1,5 +1,5 @@
 html {
-    font-size: calc(12.1428571429px + 0.58035714285vw);
+  font-size: calc(11.1428571429px + 0.58035714285vw);
 }
 
 @tailwind base;

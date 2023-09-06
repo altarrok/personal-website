@@ -1,14 +1,14 @@
 import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
 
 export const TitleSection: React.FC<PropsWithChildren> = ({ children }) => {
-    const textRef = useRef(null);
+    const textRef = useRef<HTMLHeadingElement>(null);
 
     
     const handleResize = useCallback(() => {
         if (textRef.current) {
             textRef.current.style.setProperty(
                 'transform',
-                `scaleX(min(1, ${textRef.current.parentNode.parentElement.clientWidth / textRef.current.scrollWidth}))`
+                `scaleX(min(1, ${(textRef.current.parentNode?.parentElement?.clientWidth || 0) / textRef.current.scrollWidth}))`
             )
         }
     }, [textRef.current]);

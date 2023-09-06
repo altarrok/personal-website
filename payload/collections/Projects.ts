@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types';
-import formatSlug from '../util/formatSlug';
+import formatSlug from '@/util/formatSlug';
 import { TMedia } from './Media';
-import { Leaf } from '../components/RichText';
+import { Leaf } from '@/components/RichText';
 
 export const Projects: CollectionConfig = {
 	slug: 'projects',
