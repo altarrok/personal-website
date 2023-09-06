@@ -11,7 +11,7 @@ export const TitleSection: React.FC<PropsWithChildren> = ({ children }) => {
                 `scaleX(min(1, ${(textRef.current.parentNode?.parentElement?.clientWidth || 0) / textRef.current.scrollWidth}))`
             )
         }
-    }, [textRef.current]);
+    }, [textRef]);
 
     useEffect(() => {
         handleResize();
@@ -19,7 +19,7 @@ export const TitleSection: React.FC<PropsWithChildren> = ({ children }) => {
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);;
-    }, [textRef.current])
+    }, [handleResize])
 
     return (
         <div className="h-full w-full" style={{ containerType: "size" }}>

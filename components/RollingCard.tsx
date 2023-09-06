@@ -28,7 +28,7 @@ export const RollingCard: React.FC<{
 
             setScrollPercentage(scrollPercentage);
         }
-    }, [cardRef.current])
+    }, [cardRef])
 
     useEffect(() => {
         onScroll();
@@ -36,7 +36,7 @@ export const RollingCard: React.FC<{
         window.addEventListener('scroll', onScroll, { passive: true });
 
         return () => window.removeEventListener('scroll', onScroll);
-    }, [cardRef.current])
+    }, [onScroll])
 
     return (
         <div
