@@ -1,7 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const scrollPercentageThreshold = 0.25;
+const scrollPercentageThreshold = 0.2;
 
 export const AppearingCard: React.FC<{
     img: {
@@ -23,7 +23,7 @@ export const AppearingCard: React.FC<{
         if (cardRef.current) {
             const scrollPercentage = Math.max(0,
                 Math.min(scrollPercentageThreshold,
-                    1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
+                    1 - (cardRef.current.getBoundingClientRect().top / document.documentElement.clientHeight)
                 )
             );
 
@@ -46,7 +46,7 @@ export const AppearingCard: React.FC<{
             style={{
                 opacity: x.to({
                     range: [0, scrollPercentageThreshold],
-                    output: [25, 100]
+                    output: [20, 100]
                 }).to(value => `${value}%`),
                 backgroundImage: "url(/images/brick-wall.svg)",
                 backgroundSize: "7.4rem 5rem",

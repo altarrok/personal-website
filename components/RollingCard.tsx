@@ -2,9 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useCallback, useEffect, useRef, useState } from "react";
 import RichText, { Leaf } from "./RichText";
 
-const scrollPercentageThreshold = 0.15;
-
-// TODO:: The background is broken in mobile
+const scrollPercentageThreshold = 0.2;
 
 export const RollingCard: React.FC<{
     from: "left" | "right",
@@ -22,10 +20,10 @@ export const RollingCard: React.FC<{
         if (cardRef.current) {
             const scrollPercentage = Math.max(0,
                 Math.min(scrollPercentageThreshold,
-                    1 - ((cardRef.current.getBoundingClientRect().top + cardRef.current.getBoundingClientRect().bottom) / (2 * document.documentElement.clientHeight))
+                    1 - (cardRef.current.getBoundingClientRect().top / document.documentElement.clientHeight)
                 )
             );
-
+            
             setScrollPercentage(scrollPercentage);
         }
     }, [cardRef])
@@ -48,7 +46,7 @@ export const RollingCard: React.FC<{
                 style={{
                     width: x.to({
                         range: [0, scrollPercentageThreshold],
-                        output: [33, 100]
+                        output: [20, 100]
                     }).to(value => `${value}%`),
                     [from]: 0,
                     backgroundImage: "url(/images/brick-wall.svg)",
