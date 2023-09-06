@@ -18,16 +18,19 @@ export const FlippableCard: React.FC<{
             }}
         >
             <div
-                className="absolute transition-all delay-500 left-5 text-white/75 z-20 text-xs"
+                className="absolute transition-all delay-500 left-5 text-white/75 z-20 text-xs bottom-2 opacity-100 xl:-bottom-full xl:opacity-0"
                 style={
-                    (!open && overlayHovered) ? {
-                        bottom: "0.5rem",
-                        opacity: "100%",
-                    } : {
-                        bottom: "-100%",
-                        opacity: "0%",
-                        transitionDelay: "0ms",
-                    }
+                    (
+                        open ? {
+                            opacity: 0,
+                            transitionDelay: "0ms",
+                        } : {
+                            ...(overlayHovered ? {
+                                bottom: "0.5rem",
+                                opacity: "100%",
+                            } : {})
+                        }
+                    )
                 }
             >
                 <span className="text-white/75 text-xs flex gap-1 items-center italic"><HiCursorClick /> Click to Reveal</span>
