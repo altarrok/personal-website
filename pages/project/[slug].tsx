@@ -20,7 +20,7 @@ const _renderProjectContent = (project?: TProject) => {
 
     return (
         <>
-            <h1 className='text-9xl font-bold text-center'>{escapeHTML(project.title)}</h1>
+            <h1 className='text-9xl font-bold text-center break-words'>{escapeHTML(project.title)}</h1>
             <hr className="h-px my-8 bg-gray-300 border-0" />
             <section>
                 <RichText content={project.content} />
@@ -40,7 +40,7 @@ const ProjectPage: NextPage<{ project?: TProject }> = ({ project }) => {
                 <link rel="icon" href="/images/favicon-light.ico" media="(prefers-color-scheme: light)" />
                 <link rel="icon" href="/images/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
             </Head>
-            <main className="w-full min-h-screen bg-black relative flex items-center justify-center">
+            <main className="w-full min-h-screen bg-black relative flex items-center justify-center overflow-x-hidden">
                 <div className='fixed top-2.5 left-4'>
                     <BackToMainPageButton />
                 </div>
