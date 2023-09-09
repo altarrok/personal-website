@@ -154,7 +154,7 @@ const serialize = (children: Leaf[]) => children.map((node, i) => {
                 <img
                     src={escapeHTML(node.value!.url)}
                     alt={escapeHTML(node.value!.alt)}
-                    className='max-w-full'
+                    className='max-w-full rounded-xl border border-solid border-black my-2'
                     key={i}
                 />
             );
