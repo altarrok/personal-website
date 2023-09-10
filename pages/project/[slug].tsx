@@ -41,7 +41,7 @@ const ProjectPage: NextPage<{ project?: TProject }> = ({ project }) => {
                 <link rel="icon" href="/images/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
             </Head>
             <main className="w-full min-h-screen bg-black relative flex items-center justify-center overflow-x-hidden">
-                <div className='fixed top-2.5 left-4'>
+                <div className='fixed top-2.5 left-4 z-50'>
                     <BackToMainPageButton />
                 </div>
                 <div className='w-screen lg:max-w-5xl py-8 px-8 lg:px-16 bg-white lg:rounded-2xl my-16 lg:m-16'>
