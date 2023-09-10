@@ -22,7 +22,7 @@ const _renderProjectContent = (project?: TProject) => {
         <>
             <h1 className='text-9xl font-bold text-center break-words'>{escapeHTML(project.title)}</h1>
             <hr className="h-px my-8 bg-gray-300 border-0" />
-            <section>
+            <section className='break-words'>
                 <RichText content={project.content} />
             </section>
         </>
