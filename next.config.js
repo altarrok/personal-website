@@ -5,6 +5,7 @@ const { withPayload } = require("@payloadcms/next-payload");
 module.exports = withPayload(
   {
     // your Next config here
+    output: 'standalone',
     experimental: {
       scrollRestoration: true,
     },
