@@ -73,7 +73,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
                   })}
                 />
               </div>
-              <div className='w-full flex-1'>
+              <div className='w-full flex-1 flex flex-col'>
                 <ShortcutCard
                   text='Portfolio'
                   onScrollTrigger={() => portfolioSectionRef.current?.scrollIntoView({

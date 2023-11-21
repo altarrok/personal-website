@@ -21,7 +21,7 @@ export const ShortcutCard: React.FC<{
                     onScrollTrigger();
                 }, 500)
             }}
-            className="w-full h-full min-h-[7.5rem] bg-white rounded-3xl cursor-pointer relative overflow-hidden"
+            className="w-full h-full min-h-[7.5rem] bg-white rounded-3xl cursor-pointer relative overflow-hidden flex-1"
         >
             <div className="absolute top-4 left-4">
                 <h2 className={`${hover ? "scale-50" : "scale-100"} origin-top-left text-6xl font-semibold transition-all duration-500`}>

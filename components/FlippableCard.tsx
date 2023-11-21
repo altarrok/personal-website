@@ -78,7 +78,7 @@ export const FlippableCard: React.FC<{
                 <i className="text-5xl lg:text-3xl">
                     {icon}
                 </i>
-                <p className="text-base lg:flex-1 font-semibold text-justify">
+                <p className="text-base lg:text-xs lg:flex-1 font-semibold text-justify">
                     {para}
                 </p>
             </div>
