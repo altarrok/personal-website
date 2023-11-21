@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push:docker": "docker build -t us-west1-docker.pkg.dev/personal-website-405604/personal-website/docker ./ && docker push us-west1-docker.pkg.dev/personal-website-405604/personal-website/docker"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.405.0",
