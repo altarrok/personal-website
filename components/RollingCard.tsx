@@ -73,7 +73,7 @@ export const RollingCard: React.FC<{
                 }}
             >
                 <h3 className="text-2xl font-bold">{title}</h3>
-                <span className="block font-semibold text-justify text-base xl:text-sm">
+                <span className="block font-semibold text-justify text-sm">
                     <RichText content={para} />
                 </span>
             </animated.div>
