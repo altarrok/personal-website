@@ -38,6 +38,11 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
       <Head>
         <title>Altay Batuhan | Interactive Resume</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Explore Altay Batuhan's dynamic resume – a passionate junior web developer showcasing enthusiasm and creativity. Dive into a world of interactive experiences and discover the skills that set Altay apart."
+          key="desc"
+        />
         <link rel="icon" href="/images/favicon-light.ico" media="(prefers-color-scheme: light)" />
         <link rel="icon" href="/images/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
       </Head>
@@ -51,6 +56,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
             </div>
             <div className="lg:h-[calc(50%-3rem)] flex items-end justify-center">
               <Image
+                priority
                 src="/images/transparent-logo.png"
                 alt="Altay Batuhan Logo"
                 width={1622}

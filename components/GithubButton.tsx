@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 export const GithubButton: React.FC = () => {
     return (
-        <SocialButton href={"https://github.com/altarrok"}>
+        <SocialButton href="https://github.com/altarrok" label="GitHub">
             <FaGithub className="w-full h-full fill-gray-50" />
         </SocialButton>
     );

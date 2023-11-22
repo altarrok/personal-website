@@ -6,6 +6,10 @@ module.exports = withPayload(
   {
     // your Next config here
     output: 'standalone',
+    i18n: {
+      locales: ["en"],
+      defaultLocale: "en",
+    },
     experimental: {
       scrollRestoration: true,
     },

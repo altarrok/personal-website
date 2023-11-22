@@ -56,9 +56,9 @@ export const FlippableCard: React.FC<{
                             key={index}
                             className="animate-h-scroll will-change-transform inline-block px-8"
                         >
-                            <h3 className="font-bold">
+                            <h1 className="font-bold">
                                 {title}
-                            </h3>
+                            </h1>
                         </div>
                     )}
                 </div>

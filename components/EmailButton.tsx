@@ -3,7 +3,7 @@ import { SocialButton } from "./SocialButton";
 
 export const EmailButton: React.FC = () => {
     return (
-        <SocialButton href={"mailto:altaybatuhanmail@gmail.com"}>
+        <SocialButton href="mailto:altaybatuhanmail@gmail.com" label="e-mail">
             <HiOutlineMail className="w-full h-full stroke-white" />
         </SocialButton>
     );

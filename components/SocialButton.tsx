@@ -1,8 +1,9 @@
 import { PropsWithChildren } from "react";
 
-export const SocialButton: React.FC<PropsWithChildren<{ href: string }>> = ({ children, href }) => {
+export const SocialButton: React.FC<PropsWithChildren<{ href: string, label: string }>> = ({ children, href, label }) => {
     return (
         <a
+            aria-label={label}
             href={href}
             target={"_blank"}
             rel={"noreferrer"}
