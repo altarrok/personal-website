@@ -1,0 +1,10 @@
+# Block all crawlers for /admin
+User-agent: *
+Disallow: /admin
+
+# Allow all crawlers to access the rest of the site
+User-agent: *
+Allow: /
+
+# Specify the location of the sitemap
+Sitemap: https://altaybatuhan.com/sitemap.xml
