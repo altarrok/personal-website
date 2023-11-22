@@ -118,7 +118,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
             <div ref={portfolioSectionRef} className="h-1/6">
               <TitleSection>Portfolio</TitleSection>
             </div>
-            <div className='w-full h-5/6 grid grid-cols-2 grid-rows-6 lg:grid-rows-3 gap-6 p-6'>
+            <div className='w-full h-5/6 grid grid-cols-2 grid-rows-6 lg:grid-rows-3 gap-6 px-6'>
               {projects?.map((project, i) => (
                 <div className='row-span-1 col-span-2 lg:col-span-1' key={i}>
                   <ProjectCard
@@ -133,7 +133,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
           <div ref={experienceSectionRef} className="h-[25vh]">
             <TitleSection>Experience</TitleSection>
           </div>
-          <div className='col-span-4 row-span-20 xl:row-span-8 col-start-1 row-start-[22] lg:row-start-[13] grid grid-rows-20 xl:grid-rows-4 gap-6 xl:gap-2'>
+          <div className='col-span-4 row-span-20 xl:row-span-8 col-start-1 row-start-[22] lg:row-start-[13] grid grid-rows-20 xl:grid-rows-4 gap-6'>
             {
               experiences.map((experience, i) => (
                 <div key={i} className="xl:min-h-[25rem] row-span-5 xl:row-span-1 grid grid-cols-1 xl:grid-cols-5 grid-rows-5 xl:grid-rows-1 gap-2">
