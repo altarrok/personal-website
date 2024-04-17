@@ -8,7 +8,7 @@ export const TitleSection: React.FC<PropsWithChildren> = ({ children }) => {
         if (textRef.current) {
             textRef.current.style.setProperty(
                 'transform',
-                `scaleX(min(1, ${(textRef.current.parentNode?.parentElement?.clientWidth || 0) / textRef.current.scrollWidth}))`
+                `scaleX(min(1, ${(textRef.current.parentNode?.parentElement?.clientWidth || 0) / (textRef.current.scrollWidth || 1)}))`
             )
         }
     }, [textRef]);
