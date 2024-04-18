@@ -6,10 +6,12 @@ export const TitleSection: React.FC<PropsWithChildren> = ({ children }) => {
     
     const handleResize = useCallback(() => {
         if (textRef.current) {
-            textRef.current.style.setProperty(
-                'transform',
-                `scaleX(min(1, ${(textRef.current.parentNode?.parentElement?.clientWidth || 0) / (textRef.current.scrollWidth || 1)}))`
-            )
+            if (textRef.current.parentNode?.parentElement?.clientWidth && textRef.current.scrollWidth) {
+                textRef.current.style.setProperty(
+                    'transform',
+                    `scaleX(max(0.4, min(1, ${textRef.current.parentNode?.parentElement?.clientWidth / textRef.current.scrollWidth})))`
+                )
+            }
         }
     }, [textRef]);
 
