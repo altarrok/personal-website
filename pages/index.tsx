@@ -91,7 +91,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
 
           </div>
           <div className='w-full h-[150vh] xl:h-[75vh] flex flex-col gap-4'>
-            <div ref={expertiseSectionRef} className="h-1/6 xl:h-1/3">
+            <div ref={expertiseSectionRef} className="h-1/6 xl:h-1/3 relative">
               <TitleSection>Expertise</TitleSection>
             </div>
             <div className='w-full h-5/6 flex gap-4 flex-col xl:flex-row'>
@@ -115,7 +115,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
             </div>
           </div>
           <div className='w-full h-[150vh] xl:h-screen flex flex-col gap-4'>
-            <div ref={portfolioSectionRef} className="h-1/6">
+            <div ref={portfolioSectionRef} className="h-1/6 relative">
               <TitleSection>Portfolio</TitleSection>
             </div>
             <div className='w-full h-5/6 grid grid-cols-2 grid-rows-6 lg:grid-rows-3 gap-6 px-6'>
@@ -130,7 +130,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
               ))}
             </div>
           </div>
-          <div ref={experienceSectionRef} className="h-[25vh]">
+          <div ref={experienceSectionRef} className="h-[25vh] relative">
             <TitleSection>Experience</TitleSection>
           </div>
           <div className='col-span-4 row-span-20 xl:row-span-8 col-start-1 row-start-[22] lg:row-start-[13] grid grid-rows-20 xl:grid-rows-4 gap-6'>
