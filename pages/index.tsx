@@ -185,7 +185,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const experienceQuery = await payload.find({
     collection: "experiences",
     sort: "-createdAt",
-    limit: 4, // To increase the number of experiences, re-configure the layout and increase this limit
   })
 
   return {
