@@ -118,7 +118,7 @@ const LandingPage: NextPage<{ projects: TProject[], experiences: TExperience[] }
             <div ref={portfolioSectionRef} className="h-1/6 relative">
               <TitleSection>Portfolio</TitleSection>
             </div>
-            <div className='w-full h-5/6 grid grid-cols-2 grid-rows-6 lg:grid-rows-3 gap-6 px-6'>
+            <div className='w-full min-h-[85%] grid grid-cols-2 grid-rows-[auto] gap-6 px-6 lg:px-0'>
               {projects?.map((project, i) => (
                 <div className='row-span-1 col-span-2 lg:col-span-1' key={i}>
                   <ProjectCard
@@ -179,7 +179,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const projectQuery = await payload.find({
     collection: 'projects',
     sort: "-createdAt",
-    limit: 6, // To increase the number of projects, re-configure the layout and increase this limit
   });
 
   const experienceQuery = await payload.find({
